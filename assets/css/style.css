@@ -56,9 +56,16 @@ body {
         background-color:#ffa500b3;
         color: white;
     }
-    .hint:active,
-    .hint:hover {
-        color: #ffa500;
-        border-color: #ce8a0b;
+
+    .hint button {
+        color:#59491d;
+        border: solid 5px #c48b22;
+        background-color:#fff
     }
-        
+ 
+    button.hint:active,
+    button.hint:hover {
+        color: #3f3a31;
+        border-color: #fff;
+        background-color:#ffa500
+    }
