@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--google fonts-->
+    <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/9662f847b8.js" crossorigin="anonymous"></script>
     <!--Favicon-->
@@ -15,34 +18,36 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="icon" href="assets/favicon/favicon.ico">
-    <link rel = "stylesheet" href = "assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Friends Trivia</title>
 </head>
+
 <body>
     <heading class="heading">
-        <img class = "logo" src="assets/images/logo_friends.jpg" alt = "logo">
+        <img class="logo" src="assets/images/logo_friends.jpg" alt="logo">
     </heading>
-
-    <div class="tracking">
-        <div class="score-area">
-            <p class="scores">Correct Answers <span id="score">0</span></p>
-            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+    
+    <div game-area>
+        <div class="tracking">
+            <div class="score-area">
+                <p class="scores">Correct: <span id="score">0</span></p>
+                <p class="scores">Incorrect: <span id="incorrect">0</span></p>
+            </div>
+            <div class="timer"><i class="fa-regular fa-hourglass-half"></i>
+            </div>
         </div>
-        <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div>
+        <div class="trivia-area">
+            <div class="questions">Questions</div>
+            <div class="answers"></div>
+                <button data-type="answerOne" class=" btn btn_one">answer1</button>
+                <button data-type="answerTwo" class="btn btn_two">answer2</button>
+                <button data-type="answerThree" class="btn btn_three">answer3</button>
+                <button data-type="answerFour" class="btn btn_four">answer4</button>
+            <div class="hint">
+                <button data-type="hint_btn" class="hint"><i class="fa-regular fa-lightbulb"></i>Hint</button>
+        </div>
     </div>
-    
-    
-    <div class="trivia-area">
-        <div class= "questions" >Questions</div>
-        <div class = "answers">Answers</div>
-            <button data-type="answerOne"  class=" btn btn_one">answer1</button>
-            <button data-type="answerTwo"class="btn btn_two">answer2</button>
-            <button data-type="answerThree"class="btn btn_three">answer3</button>
-            <button data-type="answerFour"class="btn btn_four">answer4</button>
-        <div class = "hint">
-            <button data-type="hint_btn" class = "hint"><i class="fa-regular fa-lightbulb"></i>Hint</button>
-        </div>
-
-    <script src = "assets/js/script.js"></script>
+        <script src="assets/js/script.js"></script>
 </body>
+
 </html>
