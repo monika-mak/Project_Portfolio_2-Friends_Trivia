@@ -16,28 +16,32 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="icon" href="assets/favicon/favicon.ico">
     <link rel = "stylesheet" href = "assets/css/style.css">
-    <title>Document</title>
+    <title>Friends Trivia</title>
 </head>
 <body>
-    <h1 class="heading">
+    <heading class="heading">
         <img class = "logo" src="assets/images/logo_friends.jpg" alt = "logo">
-    </h1>
+    </heading>
 
+    <div class="tracking">
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+        </div>
+        <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div>
+    </div>
+    
+    
     <div class="trivia-area">
         <div class= "questions" >Questions</div>
         <div class = "answers">Answers</div>
-            <button data-type="answerOne"  class="btn_one">answer1</button>
-            <button data-type="answerTwo"class="btn_two">answer2</button>
-            <button data-type="answerThree"class="btn_three">answer3</button>
-            <button data-type="answerFour"class="btn_four">answer4</button>
+            <button data-type="answerOne"  class=" btn btn_one">answer1</button>
+            <button data-type="answerTwo"class="btn btn_two">answer2</button>
+            <button data-type="answerThree"class="btn btn_three">answer3</button>
+            <button data-type="answerFour"class="btn btn_four">answer4</button>
         <div class = "hint">
             <button data-type="hint_btn" class = "hint"><i class="fa-regular fa-lightbulb"></i>Hint</button>
         </div>
-
-    <div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-    </div>
 
     <script src = "assets/js/script.js"></script>
 </body>

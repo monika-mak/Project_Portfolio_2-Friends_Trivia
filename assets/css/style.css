@@ -20,11 +20,18 @@ text-align: center;
     gap: 15px;
 }
 .questions {
+    color:black;
     font-size: 2.5rem;
     padding: 20px 20px;
-    border: solid;
+    border: solid 7px orange;
     margin: 0px 40px;
-    background-color: orange;
+    background-color: white;
 }
-.button {
-    font-size: 2rem;}
+button {
+    font-size: 2rem;
+    padding:10px 10px;
+    background-color:orange;
+    border:solid 3px;
+    border-color:white;
+}
+
