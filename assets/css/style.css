@@ -2,9 +2,9 @@
 body {
     display:flex;
     flex-direction: column;
-    background-color: #8955b4;
+    background-color: white;
     font-family: "Caveat", cursive;
-    color:white;
+    color:rgba(6, 6, 6, 0.862);
     text-align: center;
     }
     
@@ -14,10 +14,14 @@ body {
     .logo{
         max-width: 90%;
     }
+    .game-area {
+        background-color:#8955b4;
+    }
     .trivia-area {
         display: flex;
         flex-direction: column;
         gap: 15px;
+
     }
     
     .tracking {
