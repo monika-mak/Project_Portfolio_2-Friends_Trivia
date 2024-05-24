@@ -35,7 +35,7 @@ body {
         flex-direction: column;
     }
     
-    .questions {
+    .displayed_question {
         color:black;
         font-size: 3rem;
         padding: 20px 20px;
@@ -61,7 +61,7 @@ body {
         color: white;
     }
 
-    .hint button {
+    .hint {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff
