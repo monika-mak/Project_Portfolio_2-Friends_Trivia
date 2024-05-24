@@ -1,4 +1,4 @@
-// trivia data - 30 qouestions 
+// trivia data - 30 qouestions
 
 const questions = [
     {
