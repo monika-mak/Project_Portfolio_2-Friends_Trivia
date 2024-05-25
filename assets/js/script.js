@@ -27,7 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
 }) 
 
 //when page (DOM) finished loading - display first question
+
 //starting with first question(index 0)
+
 let currentQuestionIndex =0;
 displayQuestion(currentQuestionIndex); 
 
@@ -36,15 +38,17 @@ function startQuiz() {
     currentQuestionIndex = 0;
     displayQuestion(currentQuestionIndex);
 }
-    
-//function to display a question
-function displayQuestion(index) {
-    currentQuestionIndex
-}
+
 //making sure questions are within bounds
-if (index < 0 || index >= questions.lenght) {
-    console.error("Invalid question index")
-    return;
+function displayQuestion(index) {
+    if (index < 0 || index >= questions.length) {
+        console.error("Invalid question index");
+        return;
+    }
+
+
+    let questionElement = document.getElementById("displayed_question");
+    let answerButtons = document.getElementsByClassName("btn");
 }
  
 //pull  the data from the trivia_data 
@@ -55,7 +59,7 @@ if (index < 0 || index >= questions.lenght) {
 questionElement.textContent = questions[index].question;
 
 //set the answer texts 
-for (let i = 0; i < answerButtons.lenght; i++) {
+for (let i = 0; i < answerButtons.length; i++) {
     answerButtons[i].textContext = question[index].answers[i];
     answerButtons[i].setAttribute("data-type, i");
 }
