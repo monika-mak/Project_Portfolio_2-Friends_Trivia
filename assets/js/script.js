@@ -61,8 +61,6 @@ for (let i = 0; i < answerButtons.lenght; i++) {
 }
 
 
-
-
 // function generateRandomQuestion () {
 //     let triviaData = getAttribute("trivia_data");
 //         for (let allQuestions of triviaData) {
