@@ -8,7 +8,7 @@
 //function createUsername () {}
 
 //returning  all the buttons from html onto js
-//making buttonsresponsive to click 
+//making buttons responsive to click 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button"); 
 
@@ -19,21 +19,54 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 let userAnswer = this.getAttribute("data-type");
                 alert(`you clicked ${userAnswer}`)
-                //startQuiz(displayQuestion);
+
+//check answer 
             }
         })
     } 
 }) 
 
+//when page (DOM) finished loading - display first question
+//starting with first question(index 0)
+let currentQuestionIndex =0;
+displayQuestion(currentQuestionIndex); 
 
-//<script scr = "trivia_data"></script>;
-// //when page (DOM) finished loading - display questions
-// function startQuiz() {}
+//function to start the quiz 
+function startQuiz() {
+    currentQuestionIndex = 0;
+    displayQuestion(currentQuestionIndex);
+}
+    
+//function to display a question
+function displayQuestion(index) {
+    currentQuestionIndex
+}
+//making sure questions are within bounds
+if (index < 0 || index >= questions.lenght) {
+    console.error("Invalid question index")
+    return;
+}
+ 
+//pull  the data from the trivia_data 
+    let questionElement = document.getElementById("displayed_question");
+    let answerButtons = document.getElementsByClassName("btn");
+
+//question text setting
+questionElement.textContent = questions[index].question;
+
+//set the answer texts 
+for (let i = 0; i < answerButtons.lenght; i++) {
+    answerButtons[i].textContext = question[index].answers[i];
+    answerButtons[i].setAttribute("data-type, i");
+}
+
+
+
 
 // function generateRandomQuestion () {
 //     let triviaData = getAttribute("trivia_data");
 //         for (let allQuestions of triviaData) {
-//             let onlyQuestions = allQuestions[0];
+//             let presentQuestions = allQuestions;
 //         }
 //             display.(onlyQuestion).random
 
