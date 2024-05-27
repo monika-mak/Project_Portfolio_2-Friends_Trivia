@@ -34,17 +34,35 @@ let answerButtons = document.getElementsByClassName("answer-buttons");
 
 //when page (DOM) finished loading - display first question
 
-//starting with first question(index 0)
+//starting with first question(index 0) making sure it is always 0 at the start 
 
-// let currentQuestionIndex =0;
-// displayQuestion(currentQuestionIndex); 
+let currentQuestionIndex = 0;
+let score = 0; 
 
-// //function to start the quiz 
-// function startQuiz() {
-//     currentQuestionIndex = 0;
-//     displayQuestion(currentQuestionIndex);
-// }
+//function to start the quiz from 0 
+function startTrivia() {
+    currentQuestionIndex = 0;
+    score =0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
 
+//function to display question 
+//questionElement = question h1 to be displayed 
+function showQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex +1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+//display answers 
+    currentQuestion.answers.forEach(answer => {
+        button.innerHTML = answer.choice;
+        button.classList.add("btn")
+        answerButtons.appendChild(button);
+    }); 
+}
+
+startTrivia();
 // //making sure questions are within bounds
 // function displayQuestion(index) {
 //     if (index < 0 || index >= questions.length) {
