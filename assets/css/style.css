@@ -21,7 +21,6 @@ body {
         display: flex;
         flex-direction: column;
         gap: 15px;
-
     }
     
     .tracking {
@@ -35,7 +34,7 @@ body {
         flex-direction: column;
     }
     
-    .displayed_question {
+    #question {
         color:black;
         font-size: 3rem;
         padding: 20px 20px;
@@ -64,7 +63,8 @@ body {
     .hint {
         color:#59491d;
         border: solid 5px #c48b22;
-        background-color:#fff
+        background-color:#fff;
+        cursor:pointer;
     }
  
     button.hint:active,
@@ -72,4 +72,11 @@ body {
         color: #3f3a31;
         border-color: #fff;
         background-color:#ffa500
+    }
+    #next_btn {
+        color:#59491d;
+        border: solid 5px #c48b22;
+        background-color:#fff;
+        cursor:pointer;
+        display: none;
     }
