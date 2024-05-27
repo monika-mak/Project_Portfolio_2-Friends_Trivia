@@ -4,27 +4,33 @@
 
 //point out to where questions are stored  
 
-let questionElement = document.getElementById("question");
-let answerButtons = document.getElementsByClassName("answer-buttons");
-let nextButton = document.getElementById("next")
+
+//pull  the data from the trivia_data 
 //function createUsername () {}
 
 //returning  all the buttons from html onto js
 //making buttons responsive to click 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button"); 
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "hint_btn") {
+        button.addEventListener("click", function () {
+            if (this.getAttribute("data-type") === "hint-btn") {
                 alert("you clicked hint"); //checking if function is working
+            } else if (this.getAttribute("data-type") === "next-btn") {
+                alert("you clicked next");
             } else {
                 let userAnswer = this.getAttribute("data-type");
-                alert(`you clicked ${userAnswer}`)
+                alert(`you clicked ${userAnswer}`);
             }
-        })
-    } 
-}) 
+        });
+    }
+});
+
+let questionElement = document.getElementById("question");
+let answerButtons = document.getElementsByClassName("answer-buttons");
+
+
 
 //when page (DOM) finished loading - display first question
 
@@ -46,12 +52,10 @@ document.addEventListener("DOMContentLoaded", function() {
 //         return;
 //     }
 
-  
+
 // }
- 
-// //pull  the data from the trivia_data 
-//     let questionElement = document.getElementById("displayed_question");
-//     let answerButtons = document.getElementsByClassName("btn");
+
+
 
 // //question text setting
 // questionElement.textContent = questions[index].question;
@@ -76,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-        
+
 
 // //once answer is given,  
 // function displayUserAnswer () {

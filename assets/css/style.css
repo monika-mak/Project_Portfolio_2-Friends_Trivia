@@ -73,10 +73,10 @@ body {
         border-color: #fff;
         background-color:#ffa500
     }
-    #next_btn {
+    #next-btn {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff;
         cursor:pointer;
-        display: none;
+        display: block;
     }
