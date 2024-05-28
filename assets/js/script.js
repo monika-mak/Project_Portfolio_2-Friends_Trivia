@@ -4,8 +4,11 @@ let questionText = document.getElementById("displayed_question");
 let answerButtons = document.querySelectorAll(".answer-buttons .btn");
 let nextButton = document.getElementsByClassName("next-btn")[0];
 let scoreDisplay = document.getElementsByClassName("answer_score")[0];
-let currentQuestion = {};
 let availableQuestions = [];
+let currentQuestion = {};
+let questionCounter = 0;
+let score = 0;
+
 
 const Max_Questions = 10;
 
@@ -32,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
 //starting with first question(index 0) making sure it is always 0 at the start 
 
 let currentQuestionIndex = 0;
-let score = 0;
 
 //function to start the trivia game from 0 
 function startTrivia() {
+    availableQuestions =[];
     currentQuestionIndex = 0;
     score = 0; //reset score to 0;
     showQuestion();//show the first question
@@ -51,9 +54,32 @@ function showQuestion() {
         questionText.innerHTML = questionNo + ". " + currentQuestion.question;
 }
 
-// //loop through the answers and set the corret one 
-//     //set the answer texts 
-//     let correctAnswer = getElementsByClassName("questions").answer;
+
+answerButtons.forEach(button => button.innerHTML = '');
+        currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionText.innerHTML = questionNo + ". " + currentQuestion.question;
+
+
+//loop through the answers and set the corret one 
+    //set the answer texts 
+    for (let i = 0; i < answerButtons.length; i++) {
+        answerButtons[i].innerText = currentQuestion["choice" + (i + 1)];
+        answerButtons[i].setAttribute("data-type", 'answer' + (i + 1));
+    }
+
+
+// code inspired from https://www.youtube.com/watch?v=PBcqGxrr9g8&t=356s
+function checkAnswer(userAnswer) {
+    let currentQuestion = questions[currentQuestionIndex];
+    let correctAnswer = currentQuestion.answer;
+}
+
+
+
+
+    //set the answer texts 
+    let correctAnswer = getAttribute("questions").answer;
 
 //     answerButtons.forEach(button=>  {
 //         if (button.getAttribute("number") === correctAnswer) {
