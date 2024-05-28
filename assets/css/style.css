@@ -17,24 +17,19 @@ body {
     .game-area {
         background-color:#8955b4;
     }
-    .trivia-area {
+    .question-area {
         display: flex;
         flex-direction: column;
         gap: 15px;
     }
     
-    .tracking {
+    .tracking-area {
         display: flex; 
         justify-content:space-evenly;
         align-items:center;
     }
     
-    .score-area div {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #question {
+    #displayed_question {
         color:black;
         font-size: 3rem;
         padding: 20px 20px;
@@ -60,20 +55,20 @@ body {
         color: white;
     }
 
-    .hint {
+    .hint-btn {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff;
         cursor:pointer;
     }
  
-    button.hint:active,
-    button.hint:hover {
+    button.hint-btn:active,
+    button.hint-btn:hover {
         color: #3f3a31;
         border-color: #fff;
         background-color:#ffa500
     }
-    .next {
+    .next-btn {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff;

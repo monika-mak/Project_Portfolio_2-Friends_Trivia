@@ -28,32 +28,30 @@
     </header>
     
     <div class="game-area">
-        <div class="tracking">
-            <div class="score-area">
-                <p class="scores">Correct: <span id="score">0</span></p>
-                <p class="scores">Incorrect: <span id="incorrect">0</span></p>
-            </div>
+        <div class="tracking-area">
+            <div class = "correct_answer_score">Your Score: 0</div>
             <div class="timer"><i class="fa-regular fa-hourglass-half"></i>
             </div>
         </div>
-        <div class="trivia-area">
-            <h1 id ="question">Question</h1>
+        <div class="question-area">
+            <h1 id ="displayed_question">Question</h1>
             <div class = "answer-buttons" >
-                <button data-type="option1" class=" btn btn-one">answer1</button>
-                <button data-type="option2" class="btn btn-two">answer2</button>
-                <button data-type="option3" class="btn btn-three">answer3</button>
-                <button data-type="option4" class="btn btn-four">answer4</button>
+                <button data-number="1" class="btn">answer1</button>
+                <button data-number="2" class="btn">answer2</button>
+                <button data-number="3" class="btn">answer3</button>
+                <button data-number="4" class="btn">answer4</button>
             </div> 
             <div>
-                <button data-type = "hint-btn" class = "hint"><i class="fa-regular fa-lightbulb"></i>Hint</button>
+                <button class = "hint-btn"><i class="fa-regular fa-lightbulb"></i>Hint</button>
             </div>
             <div>
-                <button data-type="next-btn" class = "next">Next</button>
+                <button class ="next-btn">Next</button>
             </div>
         </div>
     </div>
-<script src="assets/js/script.js"></script>
+
 <script src="assets/js/trivia_data.js"></script>
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>
