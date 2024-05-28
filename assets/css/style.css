@@ -78,5 +78,13 @@ body {
         border: solid 5px #c48b22;
         background-color:#fff;
         cursor:pointer;
-        display: none;
+        display: block;
+    }
+
+    .correct {
+        background-color: rgb(36, 237, 170);
+    }
+
+    .incorrect {
+        background-color: rgb(248, 83, 83);
     }
