@@ -55,20 +55,20 @@ body {
         color: white;
     }
 
-    .hint-btn {
+    .hint {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff;
         cursor:pointer;
     }
  
-    button.hint-btn:active,
-    button.hint-btn:hover {
+    button.hint:active,
+    button.hint:hover {
         color: #3f3a31;
         border-color: #fff;
         background-color:#ffa500
     }
-    .next-btn {
+    .next {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff;

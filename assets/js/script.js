@@ -1,9 +1,9 @@
 
 // Select necessary HTML elements for displaying the question and answers
 let questionText = document.getElementById("displayed_question");
-let answerButtons = Array.from(document.getElementsByClassName("answer-buttons"));
-let nextButton = document.getElementsByClassName("next-btn");
-let scoreDisplay = document.getElementById("correct_answer_score");
+let answerButtons = document.querySelectorAll(".answer-buttons .btn");
+let nextButton = document.getElementsByClassName("next-btn")[0];
+let scoreDisplay = document.getElementsByClassName("answer_score")[0];
 let currentQuestion = {};
 let availableQuestions = [];
 
@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     Array.from(buttons).forEach(button => {
-        button.addEventListener("click", function () {
+        button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "hint-btn") {
-                displayHint(); //checking if function is working
+                alert("hint button!"); //displayHint(); checking if function is working
             } else if (this.getAttribute("data-type") === "next-btn") {
-                nextQuestion();
+                alert("nextbutton");//nextQuestion();
             } else {
                 let userAnswer = this.getAttribute("data-number");
-                checkAnswer(userAnswer);
+                alert("you pressed :" + userAnswer ); //checkAnswer(userAnswer);
             }
         });
     });
@@ -38,7 +38,7 @@ let score = 0;
 function startTrivia() {
     currentQuestionIndex = 0;
     score = 0; //reset score to 0;
-    showQuestion()//show the first question
+    showQuestion();//show the first question
 }
 
 //function to display question 
@@ -49,32 +49,34 @@ function showQuestion() {
         let currentQuestion = questions[currentQuestionIndex];
         let questionNo = currentQuestionIndex + 1;
         questionText.innerHTML = questionNo + ". " + currentQuestion.question;
+}
 
-//loop through the answers and set the corret one 
-    //set the answer texts 
+// //loop through the answers and set the corret one 
+//     //set the answer texts 
+//     let correctAnswer = getElementsByClassName("questions").answer;
 
-    answerButtons.forEach(button=>  {
-        if (button.getAttribute("data-number") === correctAnswer) {
-            button.classList.add("correct");
-            if (userAnswer === correctAnswer) {
-                score++;
-            }
-    } else if (button.getAttribute("data-number") === userAnswer) {
-        button.classList.add("incorrect");
-    };
+//     answerButtons.forEach(button=>  {
+//         if (button.getAttribute("number") === correctAnswer) {
+//             button.classList.add("correct");
+//             if (userAnswer === correctAnswer) {
+//                 score++;
+//             }
+//     } else if (button.getAttribute("data-number") === userAnswer) {
+//         button.classList.add("incorrect");
+//     };
 
-        answerButtons[i].onclick = function() {
-            checkAnswer(this.getAttribute("data-number"));
-        };
-    }
-)};
+//         answerButtons[i].onclick = function() {
+//             checkAnswer(this.getAttribute("data-number"));
+//         };
+//     }
+// )};
 
 // // code inspired from https://www.youtube.com/watch?v=PBcqGxrr9g8&t=356s
 // function checkAnswer(userAnswer) {
 //     let currentQuestion = questions[currentQuestionIndex];
 //     let correctAnswer = currentQuestion.answer;
 // }
-
+    
 //     answerButtons.forEach(button =>  {
 //         if (button.getAttribute("data-number") === correctAnswer) {
 //             button.classList.add("correct");
@@ -142,19 +144,6 @@ function showQuestion() {
 
 //pull  the data from the trivia_data 
 //function createUsername () {}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
