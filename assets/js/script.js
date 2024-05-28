@@ -36,39 +36,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let currentQuestionIndex = 0;
 
-//function to start the trivia game from 0 
+//function to start the trivia game ,available questions, inspired by youtube tutorial
+// https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3
 function startTrivia() {
-    availableQuestions =[];
+    questionCounter = 0;
+    availableQuestions =[...questions];
     currentQuestionIndex = 0;
     score = 0; //reset score to 0;
     showQuestion();//show the first question
 }
 
-//function to display question 
-//questionElement = question  to be displayed 
+// //function to display question 
+// //questionElement = question  to be displayed 
 function showQuestion() {
 //clear any previous answers (this is a node list needs to run through all questions) 
     answerButtons.forEach(button => button.innerHTML = '');
         let currentQuestion = questions[currentQuestionIndex];
         let questionNo = currentQuestionIndex + 1;
         questionText.innerHTML = questionNo + ". " + currentQuestion.question;
-}
-
-
-answerButtons.forEach(button => button.innerHTML = '');
-        currentQuestion = questions[currentQuestionIndex];
-        let questionNo = currentQuestionIndex + 1;
-        questionText.innerHTML = questionNo + ". " + currentQuestion.question;
-
-
 //loop through the answers and set the corret one 
-    //set the answer texts 
+//set the answer texts 
+
+
     for (let i = 0; i < answerButtons.length; i++) {
         answerButtons[i].innerText = currentQuestion["choice" + (i + 1)];
-        answerButtons[i].setAttribute("data-type", 'answer' + (i + 1));
+        answerButtons[i].setAttribute("data-number", 'answer' + (i + 1));
     }
-
-
+}
 // code inspired from https://www.youtube.com/watch?v=PBcqGxrr9g8&t=356s
 function checkAnswer(userAnswer) {
     let currentQuestion = questions[currentQuestionIndex];
@@ -79,7 +73,7 @@ function checkAnswer(userAnswer) {
 
 
     //set the answer texts 
-    let correctAnswer = getAttribute("questions").answer;
+    //let correctAnswer = getAttribute(questions).answer;
 
 //     answerButtons.forEach(button=>  {
 //         if (button.getAttribute("number") === correctAnswer) {
