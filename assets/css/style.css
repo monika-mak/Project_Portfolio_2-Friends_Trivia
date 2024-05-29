@@ -55,7 +55,7 @@ body {
         color: white;
     }
 
-    .hint {
+    #hint {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff;
@@ -68,7 +68,7 @@ body {
         border-color: #fff;
         background-color:#ffa500
     }
-    .next {
+    #next {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff;
