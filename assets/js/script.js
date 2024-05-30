@@ -2,7 +2,6 @@
 const question = document.getElementById("displayed-question");
 const answers = Array.from(document.getElementsByClassName("answer-btn"));
 const questionCounterDisplay = document.getElementById("questionCounter");
-const scoreDisplay = document.getElementById("score");
 
 
 let availableQuestions = []; //make copy of question array so that original list will not be affected
@@ -19,7 +18,7 @@ let questions =[
     choice2: "My Heart Will Go On",
     choice3: "I Will Always Love You",
     choice4: "Endless Love",
-    answer: 1,
+    correctChoice: 1,
     hint: "It's a U2 song that Ross plays repeatedly after their breakup."
 },
 { 
@@ -28,7 +27,7 @@ let questions =[
     choice2: "Joey",
     choice3: "Ross",
     choice4: "Phoebe",
-    answer: 3,
+    correctChoice: 3,
     hint: "'We were on a break!'"
 },
 { 
@@ -37,7 +36,7 @@ let questions =[
     choice2: "Jack",
     choice3: "Joey Jr.",
     choice4: "Luke",
-    answer: 1,
+    correctChoice: 1,
     hint: "He was played by twins, Cole and Dylan Sprouse."
 },
 { 
@@ -46,7 +45,7 @@ let questions =[
     choice2: "His food",
     choice3: "His clothes",
     choice4: "His car",
-    answer: 2,
+    correctChoice: 2,
     hint: "Joey doesn't share food!"
 }
 ];
@@ -78,7 +77,7 @@ function showNewQuestion() {
     const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[currentQuestionIndex];
     question.innerText = currentQuestion.question;
-    
+
     //connect each question with the answer set via data-number 
     answers.forEach(answer => {
         const number = answer.dataset["number"]; //answer buttons that needs to be filled with actual answers
@@ -114,7 +113,7 @@ answers.forEach(answer => {
 
 function incrementScore(num) {
     score += num;
-    score.inner.txt = score;
+    score.innerText = score;
 };
 
 startTrivia();
