@@ -27,7 +27,7 @@
         <img class="logo" src="assets/images/logo_friends.jpg" alt="logo">
     </header>
     
-    <div class="trivia-area">
+    <div class="container">
         <div class="tracking-elements">
             <div class = "counter">
                 <p class = "counter-text">Question </p>
@@ -39,14 +39,15 @@
             </div>
             <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div>
         </div>
-        <div class="question-area">
-            <h1 id ="displayed_question">Question</h1>
-            <div class = "answer-buttons" >
-                <button data-number="1" class="btn">answer1</button>
-                <button data-number="2" class="btn">answer2</button>
-                <button data-number="3" class="btn">answer3</button>
-                <button data-number="4" class="btn">answer4</button>
-            </div> 
+        <div class="trivia-game">
+            <div class = questions-area>
+                <h1 id ="displayed_question">Question</h1>
+                <div class = "answer-buttons" >
+                    <button data-number="1" class="answer-btn">answer1</button>
+                    <button data-number="2" class="answer-btn">answer2</button>
+                    <button data-number="3" class="answer-btn">answer3</button>
+                    <button data-number="4" class="answer-btn">answer4</button>
+                </div> 
             <div>
                 <button data-type = "hint-btn" id =" hint"><i class="fa-regular fa-lightbulb"></i>Hint</button>
             </div>
