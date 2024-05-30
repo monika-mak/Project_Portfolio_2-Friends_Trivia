@@ -1,22 +1,20 @@
 //get all global variables in one place 
-const question = document.getElementById("question");
+const question = document.getElementById("displayed-question");
+const answers = Array.from(document.getElementsByClassName("answer-btn"));
 
 
-
-//*********************** CODE BELOW WORKS UP TO SELECTING BUTTONS, NEW APPROACH TAKEN
-  
-// Select necessary HTML elements for displaying the question and answers
-const questionText = document.getElementById("displayed_question");
-const answerButtons = document.querySelectorAll(".answer-buttons .btn");
-const nextButton = document.getElementById("next-btn");
-const scoreDisplay = document.getElementById("answer_score");
-let currentQuestionIndex = 0;
 let availableQuestions = [];
 let currentQuestion = {};
+let acceptingAnswers = true;
 let questionCounter = 0;
 let score = 0;
 
-const Max_Questions = 10;
+//make copy of question list so that original list will not be affected
+availableQuestions = [...questions];
+
+//necessary constants
+const awardedPoints = 1;
+const maxQuestions = 10;
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
@@ -40,8 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
 //when page (DOM) finished loading - display first question
 //starting with first question(index 0) making sure it is always 0 at the start 
 
-//function to start the trivia game ,available questions, inspired by youtube tutorial
-// https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3
+//function to start the trivia game ,available questions, 
+//inspired by youtube tutorial
+// https://www.youtube.com/watch?v=zZdQGs62cR8&list=
+//PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3
 function startTrivia() {
     questionCounter = 0;
     availableQuestions =[...questions];
