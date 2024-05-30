@@ -14,12 +14,12 @@ body {
     .logo{
         max-width: 90%;
     }
-    .game-area {
-        background-color:#8955b4;
-    }
     .container {
+        background-color:#8955b4;
+        padding:20px;
+    }
+    .tracking-elements {
         display: flex;
-        flex-direction: column;
         gap: 15px;
     }
     
