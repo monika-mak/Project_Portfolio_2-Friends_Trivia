@@ -63,8 +63,8 @@ function showQuestion() {
     question.innerText = currentQuestion.question;
     //connect each question with the answer set via data-number 
     answers.forEach(answer => {
-    const number = answer.dataset["number"];
-    answer.innerText = currentQuestion["answer" + number];
+    const number = answer.dataset["number"]; //answer buttons that needs to be filled with actual answers
+    answer.innerText = currentQuestion["choice" + number]; //"choice" set from questions arrays 
     })
 
     //making sure used questions do not repeat 
@@ -72,6 +72,13 @@ function showQuestion() {
     acceptingAnswers = true;
 };
 
+answers.forEach(answer => {
+    answer.addEventListener("click" , event =>{
+        if(!acceptingAnswers) return;
+
+        acceptingAnswers
+    })
+})
 
 startTrivia()
 
