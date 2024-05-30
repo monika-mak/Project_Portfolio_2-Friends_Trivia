@@ -5,19 +5,17 @@ const questionCounterDisplay = document.getElementById("questionCounter");
 const scoreDisplay = document.getElementById("score");
 
 
-let availableQuestions = [];
+let availableQuestions = []; //make copy of question array so that original list will not be affected
 let currentQuestion = {};
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let questionCounter = 0;
 let score = 0;
 
 
-//make copy of question list so that original list will not be affected
-availableQuestions = [...questions];
 
-//necessary constants
-const awardedPoints = 1;
-const maxQuestions = 10;
+
+
+
 
 // document.addEventListener("DOMContentLoaded", function() {
 //     let buttons = document.getElementsByTagName("button");
@@ -38,23 +36,43 @@ const maxQuestions = 10;
 //     startTrivia();
 // });
  
-
+//necessary constants
+const awardedPoints = 1;
+const maxQuestions = 10;
 //when page (DOM) finished loading - display first question
 //starting with first question(index 0) making sure it is always 0 at the start  
 
 function startTrivia() {
+
     questionCounter = 0;
-    score = 0; //reset score to 0;
-    availableQuestions = [...questions];    
+    score = 0; //reset score to 0;   
+    availableQuestions = [...questions];
     showQuestion();//show the first question
 };
-//inspired by youtube tutorial
+
+
+//once number of questions is finished go to the end page
+//inspired by youtube tutorial:
 // https://www.youtube.com/watch?v=zZdQGs62cR8&list=
 //PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3
 
-//once number of questions is finished go to the end page
-//code inspired by video tutorial: 
+function showQuestion() {
+    if(availableQuestions.length === 0 || questionCounter >= maxQuestions) {
+        return window.location.assign('/end.html');  
+    }
 
+    questionCounter++;
+    questionCounterDisplay.innerText = `${questionCounter} / ${maxQuestions}`;
+    const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[currentQuestionIndex];
+    question.innerText = currentQuestion.question;
+
+    answers.forEach(answer => {
+    const number = answer.dataset["number"];
+    answer.innerText = currentQuestion["choice" + number];
+})
+
+};
 
 // function showQuestion() { 
 //     answerButtons.forEach(button => button.innerHTML = '');
