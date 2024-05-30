@@ -24,7 +24,7 @@ body {
         gap: 15px;
     }
     
-    .tracking-area {
+    .trivia-game {
         display: flex; 
         justify-content:space-evenly;
         align-items:center;

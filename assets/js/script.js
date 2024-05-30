@@ -73,23 +73,23 @@ function showNewQuestion() {
         return window.location.assign('/end.html');
     }
     questionCounter++;
-    questionCounterDisplay.innerText = `${questionCounter} / ${maxQuestions}`;
-    const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
+    questionCounterDisplay.innerText = `${questionCounter} / ${maxQuestions}`; //display question counter 
+    const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);//takes random int available from the available question 
     currentQuestion = availableQuestions[currentQuestionIndex];
     question.innerText = currentQuestion.question;
 
     //connect each question with the answer set via data-number 
     answers.forEach(answer => {
-        const number = answer.dataset["number"]; //answer buttons that needs to be filled with actual answers
-        answer.innerText = currentQuestion["choice" + number]; //"choice" set from questions arrays 
+        const number = answer.dataset["number"]; //number property is given to match the number value of each question
+        answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
     })
 
-    //making sure used questions do not repeat 
-    availableQuestions.splice(currentQuestionIndex, 1);
+    
+    availableQuestions.splice(currentQuestionIndex, 1);//making sure used questions do not repeat 
     acceptingAnswers = true;
-};
+    };
 
-answers.forEach(answer => {
+    answers.forEach(answer => {
     answer.addEventListener("click", event => {
         if (!acceptingAnswers) return;
 
@@ -97,24 +97,27 @@ answers.forEach(answer => {
         const selectedChoice = event.target; //targeting where user clicked 
         const selectedAnswer = selectedChoice.dataset["number"]; //asigning the click to coresponded answer
 
-        const classToApply =
-            selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-        if (classToApply === "correct") {
-            incrementScore(awardedPoints); //awardedPoints++; 
-        }
+        console.log(selectedAnswer == currentQuestion.correctChoice);
+    
+        startTrivia();
+//         const classToApply =
+//             selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+//         if (classToApply === "correct") {
+//             score++; 
+//         }
 
-        selectedChoice.parentElement.classList.add(classToApply);
-        setTimeout(() => {
-            showNewQuestion(); //apply class (correct or incorrect ) to the clicked answer
-            selectedChoice.parentElement.classList.remove(classToApply);
-        }, 1000); // displaying the results for 1 sec (1000 milisec.) before moving on
+//         selectedChoice.parentElement.classList.add(classToApply);
+//         setTimeout(() => {
+//             showNewQuestion(); //apply class (correct or incorrect ) to the clicked answer
+//             selectedChoice.parentElement.classList.remove(classToApply);
+//         }, 1000); // displaying the results for 1 sec (1000 milisec.) before moving on
     });
 });
 
-function incrementScore(num) {
-    score += num;
-    score.innerText = score;
-};
+// function incrementScore(num) {
+//     score += num;
+//     score.innerText = score;
+// };
 
 startTrivia();
 
