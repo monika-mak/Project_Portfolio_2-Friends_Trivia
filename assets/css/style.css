@@ -18,6 +18,7 @@ body {
         background-color:#8955b4;
         padding:20px;
     }
+
     .tracking-elements {
         display: flex;
         gap: 15px;
@@ -28,10 +29,9 @@ body {
         justify-content:space-evenly;
         align-items:center;
     }
-    
-    #displayed_question {
+
+    #displayed-question {
         color:black;
-        font-size: 3rem;
         padding: 20px 20px;
         border: solid 5px white;
         margin: 0px 10%;
