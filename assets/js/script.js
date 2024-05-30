@@ -12,11 +12,6 @@ let questionCounter = 0;
 let score = 0;
 
 
-
-
-
-
-
 // document.addEventListener("DOMContentLoaded", function() {
 //     let buttons = document.getElementsByTagName("button");
 
@@ -66,13 +61,22 @@ function showQuestion() {
     const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[currentQuestionIndex];
     question.innerText = currentQuestion.question;
-
+    //connect each question with the answer set via data-number 
     answers.forEach(answer => {
     const number = answer.dataset["number"];
-    answer.innerText = currentQuestion["choice" + number];
-})
+    answer.innerText = currentQuestion["answer" + number];
+    })
 
+    //making sure used questions do not repeat 
+    availableQuestions.splice(currentQuestionIndex , 1);
+    acceptingAnswers = true;
 };
+
+
+startTrivia()
+
+
+
 
 // function showQuestion() { 
 //     answerButtons.forEach(button => button.innerHTML = '');
