@@ -1,8 +1,9 @@
+//get all global variables in one place 
+const question = document.getElementById("question");
 
 
 
-
-*********************** CODE BELOW WORKS UP TO SELECTING BUTTONS, NEW APPROACH TAKEN **************************************************
+//*********************** CODE BELOW WORKS UP TO SELECTING BUTTONS, NEW APPROACH TAKEN
   
 // Select necessary HTML elements for displaying the question and answers
 const questionText = document.getElementById("displayed_question");
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (this.getAttribute("data-type") === "next-btn") {
                 alert("nextbutton");//nextQuestion();
             } else {
-                let userAnswer = this.getAttribute("data-number");
+                let userAnswer = this.getAttribute(this);
                 alert("you pressed :" + userAnswer ); //checkAnswer(userAnswer);
             }
         });
@@ -76,7 +77,7 @@ startTrivia();
 
 
 
-//    *****************************************************************************
+//    ************************************************************
 
 
 
@@ -121,4 +122,4 @@ startTrivia();
 
 
 
-//************************** this is copy *********************************************************************
+//************************** this is copy ********************
