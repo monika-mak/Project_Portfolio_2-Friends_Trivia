@@ -2,6 +2,7 @@
 const question = document.getElementById("displayed-question");
 const answers = Array.from(document.getElementsByClassName("answer-btn"));
 const questionCounterDisplay = document.getElementById("questionCounter");
+const scoreDisplay = document.getElementById("score");
 
 
 let availableQuestions = []; //make copy of question array so that original list will not be affected
@@ -73,15 +74,16 @@ function showNewQuestion() {
     if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
         return window.location.assign('/end.html');
     }
-    questionCounter++;
+    questionCounter++;//takes random int available from the available question 
     questionCounterDisplay.innerText = `${questionCounter} / ${maxQuestions}`; //display question counter 
-    const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);//takes random int available from the available question 
+    const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[currentQuestionIndex];
     question.innerText = currentQuestion.question;
 
     //connect each question with the answer set via data-number 
+     //number property is given to match the number value of each question
     answers.forEach(answer => {
-        const number = answer.dataset["number"]; //number property is given to match the number value of each question
+        const number = answer.dataset["number"];
         answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
     })
 
@@ -103,9 +105,11 @@ answers.forEach(answer => {
         //assign class name to correct and incorrect answers so that they can be destinguished.
         // const classToApply = selectedAnswer == currentQuestion.correctChoice ? "correct" : "incorrect" ; 
         let classToApply = "incorrect";
-            if (selectedAnswer== currentQuestion.correctChoice) {
-                classToApply = "correct";}
-
+            if (selectedAnswer == currentQuestion.correctChoice) {
+                classToApply = "correct";
+                score++;
+            };
+        
         selectedChoice.classList.add(classToApply); // applying the clss onto the choices
         // displaying the results for 2 sec (1000 milisec.) before removing it and getting next question
         setTimeout(() => {              
@@ -115,24 +119,8 @@ answers.forEach(answer => {
     });
 });
 
-        // answerButtons.forEach(button =>  {
-        //     //         if (selectedAnswer === correctAnswer) {
-        //     //             button.classList.add("correct");
-        //     //             if (userAnswer === correctAnswer) {
-        //     //                 score++;
-        //     //             }
-        //     //     } else if (button.getAttribute("data-number") === userAnswer) {
-        //     //         button.classList.add("incorrect");
 
-
-
-//    
-
-// function incrementScore(num) {
-//     score += num;
-//     score.innerText = score;
-// };
-
+displayScore :
 startTrivia();
 
 
