@@ -49,12 +49,14 @@ body {
         border-color:orange;
         transition: all 0.5s;
     }
+    
+
     .btn:active,
     .btn:hover {
         background-color:#ffa500b3;
         color: white;
     }
-
+ 
     #hint {
         color:#59491d;
         border: solid 5px #c48b22;
@@ -76,10 +78,12 @@ body {
         display: block;
     }
 
-    .correct {
+   .correct,
+    button.hint:hover {
         background-color: rgb(36, 237, 170);
     }
 
-    .incorrect {
+   .incorrect,
+    button.hint:hover {
         background-color: rgb(248, 83, 83);
     }

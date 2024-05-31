@@ -106,13 +106,12 @@ answers.forEach(answer => {
             if (selectedAnswer== currentQuestion.correctChoice) {
                 classToApply = "correct";}
 
-        
-        selectedChoice.parentElement.classList.add(classToApply); // applying the clss onto the choices
+        selectedChoice.classList.add(classToApply); // applying the clss onto the choices
         // displaying the results for 2 sec (1000 milisec.) before removing it and getting next question
         setTimeout(() => {              
-        selectedChoice.parentElement.classList.remove(classToApply);
+        selectedChoice.classList.remove(classToApply);
         showNewQuestion();
-            }, 1200); 
+            }, 1000); 
     });
 });
 
