@@ -38,6 +38,20 @@ body {
         border-radius:10px;
         background-color: orange;
     }
+
+    #hint {
+        color:#59491d;
+        border: solid 5px #c48b22;
+        background-color:#fff;
+        cursor:pointer;
+    }
+    #next {
+        color:#59491d;
+        border: solid 5px #c48b22;
+        background-color:#fff;
+        cursor:pointer;
+        display: block;
+    }
     
     button {
         font-size: 2rem;
@@ -51,32 +65,19 @@ body {
     }
     
 
-    .btn:active,
+    /* .btn:active,
     .btn:hover {
         background-color:#ffa500b3;
         color: white;
     }
  
-    #hint {
-        color:#59491d;
-        border: solid 5px #c48b22;
-        background-color:#fff;
-        cursor:pointer;
-    }
  
-    button.hint:active,
-    button.hint:hover {
+    .hint-btn:active,
+    .hint-btn:hover {
         color: #3f3a31;
         border-color: #fff;
         background-color:#ffa500
-    }
-    #next {
-        color:#59491d;
-        border: solid 5px #c48b22;
-        background-color:#fff;
-        cursor:pointer;
-        display: block;
-    }
+    } */
 
    .correct,
    .answerBtn:hover,

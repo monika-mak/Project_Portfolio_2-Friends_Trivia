@@ -10,8 +10,7 @@ let currentQuestion = {};
 let acceptingAnswers = false;
 let questionCounter = 0;
 let score = 0;
-let hint = document.getElementById("hint");
-let next = document.getElementById("next");
+
 
 let questions =[
     { 
@@ -85,12 +84,20 @@ function showNewQuestion() {
     answers.forEach(answer => {
         const number = answer.dataset["number"];
         answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
-    })
+    });
 
     
     availableQuestions.splice(currentQuestionIndex, 1);//making sure used questions do not repeat 
     acceptingAnswers = true;
-    };
+};
+
+function displayHint(event) {
+    hint.innerText = currentQuestion["hint"]
+};
+
+//hint to display once user clicks on it 
+let hintClicked = document.getElementById("hint");
+hintClicked.addEventListener("click", displayHint);
 
 //asigning user click(choice) to coresponded answer
 answers.forEach(answer => {
@@ -107,7 +114,7 @@ answers.forEach(answer => {
         let classToApply = "incorrect";
             if (selectedAnswer == currentQuestion.correctChoice) {
                 classToApply = "correct";
-                score++;
+                incrementScore(awardedPoints);
             };
         
         selectedChoice.classList.add(classToApply); // applying the clss onto the choices
@@ -119,8 +126,11 @@ answers.forEach(answer => {
     });
 });
 
+incrementScore = num => {
+    score += num
+    scoreDisplay.innerText = score;
+};
 
-displayScore :
 startTrivia();
 
 
@@ -128,88 +138,3 @@ startTrivia();
 
 // document.addEventListener("DOMContentLoaded", function () {
 //     let 
-
-//     Array.from(buttons).forEach(button => {
-//         button.addEventListener("click", function () {
-//             if (this.getAttribute("data-type") === "hint-btn") {
-//                 alert("hint button!"); //displayHint(); checking if function is working
-//             } else(this.getAttribute("data-type") === "next-btn") {
-//                 alert("nextbutton"); //nextQuestion();
-//             })
-//     });
-//     //start the game when page loads
-//     startTrivia();
-// });
-
-
-// //once button "hint" is pressed the hint message is displayed.
-// function displayHint () { 
-//     if (userAnswer === currentQuestion.hint) {
-//         hint.innerText()
-//     }
-// }
-
-
-// function showQuestion() { 
-//     answerButtons.forEach(button => button.innerHTML = '');
-//         let currentQuestion = questions[currentQuestionIndex]; 
-//         let questionNo = currentQuestionIndex + 1;
-//         questionText.innerHTML = questionNo + ". " + currentQuestion.question;
-
-
-// //loop through the answers and set the corret one 
-// //set the answer texts 
-
-
-//     for (let i = 0; i < answerButtons.length; i++) {
-//         answerButtons[i].innerText = currentQuestion["choice" + (i + 1)];
-//         answerButtons[i].setAttribute("data-number", 'answer' + (i + 1));
-//     }
-// };
-// // code inspired from https://www.youtube.com/watch?v=PBcqGxrr9g8&t=356s
-// function checkAnswer() {
-//     let currentQuestion = questions[currentQuestionIndex];
-//     let correctAnswer = currentQuestion.answer;
-// };
-
-// startTrivia();
-
-// //clear any previous answers (this is a node list needs to run through all questions)
-
-//    ************************************************************
-
-
-// // code inspired from https://www.youtube.com/watch?v=PBcqGxrr9g8&t=356s
-// function checkAnswer(userAnswer) {
-//     let currentQuestion = questions[currentQuestionIndex];
-//     let correctAnswer = currentQuestion.answer;
-// }
-
-//     answerButtons.forEach(button =>  {
-//         if (button.getAttribute("data-number") === correctAnswer) {
-//             button.classList.add("correct");
-//             if (userAnswer === correctAnswer) {
-//                 score++;
-//             }
-//     } else if (button.getAttribute("data-number") === userAnswer) {
-//         button.classList.add("incorrect");
-//     }
-// });
-
-// startTrivia();
-
-//nextButton.style.display ="block";
-
-
-
-// //making sure questions are within bounds
-// function displayQuestion(index) {
-//     if (index < 0 || index >= questions.length) {
-//         console.error("Invalid question index");
-//         return;
-//     }
-// }
-
-
-
-//************************** this is copy ********************
