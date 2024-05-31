@@ -90,6 +90,7 @@ function showNewQuestion() {
     acceptingAnswers = true;
     };
 
+//asigning user click(choice) to coresponded answer
 answers.forEach(answer => {
     answer.addEventListener("click", event => {
         if (!acceptingAnswers) return;
@@ -98,31 +99,23 @@ answers.forEach(answer => {
         const selectedChoice = event.target; //targeting where user clicked 
         const selectedAnswer = selectedChoice.dataset["number"];
 
-        // const classToApply = selectedAnswer == currentQuestion.correctChoice ? "correct" : "incorrect" ;
-     
+
+        //assign class name to correct and incorrect answers so that they can be destinguished.
+        // const classToApply = selectedAnswer == currentQuestion.correctChoice ? "correct" : "incorrect" ; 
         let classToApply = "incorrect";
-            if (selectedAnswer == currentQuestion.correctChoice) {
-                classToApply = "correct";
-        };
+            if (selectedAnswer== currentQuestion.correctChoice) {
+                classToApply = "correct";}
 
-
-
-
-    
         
-        //asigning the click to coresponded answer
-        
-        
-        // function classToApply() {
-        //     if (selectedAnswer == currentQuestion.correctChoice) {
-        //         classToApply = "correct";
-        //     } else {
-        //         classToApply = "incorrect";
-        //     };
-        // };
-
-        console.log(classToApply);
+        selectedChoice.parentElement.classList.add(classToApply); // applying the clss onto the choices
+        // displaying the results for 2 sec (1000 milisec.) before removing it and getting next question
+        setTimeout(() => {              
+        selectedChoice.parentElement.classList.remove(classToApply);
         showNewQuestion();
+            }, 1200); 
+    });
+});
+
         // answerButtons.forEach(button =>  {
         //     //         if (selectedAnswer === correctAnswer) {
         //     //             button.classList.add("correct");
@@ -134,14 +127,7 @@ answers.forEach(answer => {
 
 
 
-//         selectedChoice.parentElement.classList.add(classToApply);
-//         setTimeout(() => {
-//             showNewQuestion(); //apply class (correct or incorrect ) to the clicked answer
-//             selectedChoice.parentElement.classList.remove(classToApply);
-//         }, 1000); // displaying the results for 1 sec (1000 milisec.) before moving on
-        //showNewQuestion();
-    });
-});
+//    
 
 // function incrementScore(num) {
 //     score += num;
