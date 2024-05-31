@@ -11,6 +11,7 @@ let questionCounter = 0;
 let score = 0;
 let hint = document.getElementById("hint");
 let next = document.getElementById("next");
+
 let questions =[
     { 
     question: "What song is famously associated with Ross and Rachel's relationship?",
@@ -89,28 +90,56 @@ function showNewQuestion() {
     acceptingAnswers = true;
     };
 
-    answers.forEach(answer => {
+answers.forEach(answer => {
     answer.addEventListener("click", event => {
         if (!acceptingAnswers) return;
 
-        acceptingAnswers = false; //creating a slight delay with chosing amnswers 
+        acceptingAnswers = false;  //creating a slight delay with chosing amnswers 
         const selectedChoice = event.target; //targeting where user clicked 
-        const selectedAnswer = selectedChoice.dataset["number"]; //asigning the click to coresponded answer
+        const selectedAnswer = selectedChoice.dataset["number"];
 
-        console.log(selectedAnswer == currentQuestion.correctChoice);
+        // const classToApply = selectedAnswer == currentQuestion.correctChoice ? "correct" : "incorrect" ;
+     
+        let classToApply = "incorrect";
+            if (selectedAnswer == currentQuestion.correctChoice) {
+                classToApply = "correct";
+        };
+
+
+
+
     
-        startTrivia();
-//         const classToApply =
-//             selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-//         if (classToApply === "correct") {
-//             score++; 
-//         }
+        
+        //asigning the click to coresponded answer
+        
+        
+        // function classToApply() {
+        //     if (selectedAnswer == currentQuestion.correctChoice) {
+        //         classToApply = "correct";
+        //     } else {
+        //         classToApply = "incorrect";
+        //     };
+        // };
+
+        console.log(classToApply);
+        showNewQuestion();
+        // answerButtons.forEach(button =>  {
+        //     //         if (selectedAnswer === correctAnswer) {
+        //     //             button.classList.add("correct");
+        //     //             if (userAnswer === correctAnswer) {
+        //     //                 score++;
+        //     //             }
+        //     //     } else if (button.getAttribute("data-number") === userAnswer) {
+        //     //         button.classList.add("incorrect");
+
+
 
 //         selectedChoice.parentElement.classList.add(classToApply);
 //         setTimeout(() => {
 //             showNewQuestion(); //apply class (correct or incorrect ) to the clicked answer
 //             selectedChoice.parentElement.classList.remove(classToApply);
 //         }, 1000); // displaying the results for 1 sec (1000 milisec.) before moving on
+        //showNewQuestion();
     });
 });
 
