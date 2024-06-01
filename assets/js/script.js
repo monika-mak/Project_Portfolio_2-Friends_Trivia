@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // https://www.youtube.com/watch?v=zZdQGs62cR8&list=
     //PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3
 
-    function showNewQuestion() {
+    function showNewQuestion() {//send the user to a end page once they had answered last question
         if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
             return window.location.assign('/end.html');
         }
@@ -88,18 +88,23 @@ document.addEventListener("DOMContentLoaded", function () {
             answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
         });
 
-        
-        availableQuestions.splice(currentQuestionIndex, 1);//making sure used questions do not repeat 
+        setTimeout(() => {              
+            selectedChoice.classList.remove(classToApply);
+            showNewQuestion();
+                }, 1000); 
+
+        //making sure used questions do not repeat 
+        availableQuestions.splice(currentQuestionIndex, 1);
         acceptingAnswers = true;
     };
 
-    function displayHint(event) {
-        hint.innerText = currentQuestion["hint"]
-    };
+    // function displayHint(event) {
+    //     hint.innerText = currentQuestion["hint"]
+    // };
 
-    //hint to display once user clicks on it 
-    let hintClicked = document.getElementById("hint");
-    hintClicked.addEventListener("click", displayHint);
+    // //hint to display once user clicks on it 
+    // let hintClicked = document.getElementById("hint");
+    // hintClicked.addEventListener("click", displayHint);
 
     //asigning user click(choice) to coresponded answer
     answers.forEach(answer => {
@@ -124,9 +129,20 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {              
             selectedChoice.classList.remove(classToApply);
             showNewQuestion();
-                }, 1000); 
+                }, 1500); 
         });
     });
+    //hint to display once user clicks on it 
+    let hintClicked = document.getElementById("hint");
+    hintClicked.addEventListener("click", displayHint);
+
+    function displayHint() {
+        hint.innerText = currentQuestion["hint"];
+        //sets timer to only display hint for 1.3 econds     
+        setTimeout( () => {
+            hint.innerText = "Hint"
+        }, 1300);
+    };
 
     incrementScore = num => {
         score += num
