@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let score = 0;
     
 
-
     let questions =[
         { 
         question: "What song is famously associated with Ross and Rachel's relationship?",
@@ -64,14 +63,23 @@ document.addEventListener("DOMContentLoaded", function () {
         questionCounter = 0;
         score = 0; //reset score to 0;   
         showNewQuestion(); //show the first question
-    };
-
+    }
+    //move focus so that mouse is not placed on the button
+    function moveFocus() {
+        const focusTarget = document.getElementById('focus-target');
+        if (focusTarget) {
+            focusTarget.focus();
+        } else {
+            document.body.focus();
+        }
+    }
     //once number of questions is finished go to the end page
     //inspired by youtube tutorial:
     // https://www.youtube.com/watch?v=zZdQGs62cR8&list=
     //PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3
 
     function showNewQuestion() {//send the user to a end page once they had answered last question
+        moveFocus(); //coursor focus to be moved once new question is displayed;
         if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
             return window.location.assign('/end.html');
         }
@@ -88,11 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
             answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
         });
 
-
         //making sure used questions do not repeat 
         availableQuestions.splice(currentQuestionIndex, 1);
         acceptingAnswers = true;
     };
+
+        
+
 
     //asigning user click(choice) to coresponded answer
     answers.forEach(answer => {
