@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const questionCounterDisplay = document.getElementById("questionCounter");
     const scoreDisplay = document.getElementById("score");
 
-
     let availableQuestions = []; //make copy of question array so that original list will not be affected
     let currentQuestion = {};
     let acceptingAnswers = false;
     let questionCounter = 0;
     let score = 0;
+    
 
 
     let questions =[
@@ -88,30 +88,18 @@ document.addEventListener("DOMContentLoaded", function () {
             answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
         });
 
-        setTimeout(() => {              
-            selectedChoice.classList.remove(classToApply);
-            showNewQuestion();
-                }, 1000); 
 
         //making sure used questions do not repeat 
         availableQuestions.splice(currentQuestionIndex, 1);
         acceptingAnswers = true;
     };
 
-    // function displayHint(event) {
-    //     hint.innerText = currentQuestion["hint"]
-    // };
-
-    // //hint to display once user clicks on it 
-    // let hintClicked = document.getElementById("hint");
-    // hintClicked.addEventListener("click", displayHint);
-
     //asigning user click(choice) to coresponded answer
     answers.forEach(answer => {
         answer.addEventListener("click", event => {
             if (!acceptingAnswers) return;
 
-            acceptingAnswers = false;  //creating a slight delay with chosing amnswers 
+            acceptingAnswers = false;  //creating a slight delay with chosing answers 
             const selectedChoice = event.target; //targeting where user clicked 
             const selectedAnswer = selectedChoice.dataset["number"];
 
@@ -122,14 +110,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (selectedAnswer == currentQuestion.correctChoice) {
                     classToApply = "correct";
                     incrementScore(awardedPoints);
-                };
-            
+                }
+            // answers.forEach(btn => {
+            //     btn.disabled = true;
+            // });
+        
             selectedChoice.classList.add(classToApply); // applying the clss onto the choices
-            // displaying the results for 2 sec (1000 milisec.) before removing it and getting next question
+            // displaying the results for 1 sec (1300 milisec.) before removing it and getting next question
             setTimeout(() => {              
             selectedChoice.classList.remove(classToApply);
             showNewQuestion();
-                }, 1500); 
+            // answers.forEach(btn => {
+            //     btn.disabled = false;
+            // });
+            }, 1000); 
+            //once choice is made, option to click is disabled 
+            
         });
     });
     //hint to display once user clicks on it 
@@ -138,10 +134,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function displayHint() {
         hint.innerText = currentQuestion["hint"];
-        //sets timer to only display hint for 1.3 econds     
+        //sets timer to only display hint for 1.2 econds     
         setTimeout( () => {
             hint.innerText = "Hint"
-        }, 1300);
+        }, 1200);
     };
 
     incrementScore = num => {
