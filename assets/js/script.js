@@ -13,45 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let acceptingAnswers = false;
     let questionCounter = 0;
     let score = 0;
-    
-    const questions =[
-        { 
-        question: "What song is famously associated with Ross and Rachel's relationship?",
-        choice1: "With or Without You",
-        choice2: "My Heart Will Go On",
-        choice3: "I Will Always Love You",
-        choice4: "Endless Love",
-        correctChoice: 1,
-        hint: "It's a U2 song that Ross plays repeatedly after their breakup."
-    },
-    { 
-        question: "Which friend was famously on a 'break' with Rachel?",
-        choice1: "Chandler",
-        choice2: "Joey",
-        choice3: "Ross",
-        choice4: "Phoebe",
-        correctChoice: 3,
-        hint: "'We were on a break!'"
-    },
-    { 
-        question: "What is the name of Ross and Carol's son?",
-        choice1: "Ben",
-        choice2: "Jack",
-        choice3: "Joey Jr.",
-        choice4: "Luke",
-        correctChoice: 1,
-        hint: "He was played by twins, Cole and Dylan Sprouse."
-    },
-    { 
-        question: "What does Joey never share?",
-        choice1: "His money",
-        choice2: "His food",
-        choice3: "His clothes",
-        choice4: "His car",
-        correctChoice: 2,
-        hint: "Joey doesn't share food!"
-    }
-    ];
 
     const awardedPoints = 1;
     const maxQuestions = 4;
@@ -125,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function clearHint() {
-        hint.innerText = "Hint"; // Reset hint text
+        hint.innerText = "Hint"; // Resets the hint text
     };
     //increase score by 1 each time class"correct"is added
     incrementScore = num => {
