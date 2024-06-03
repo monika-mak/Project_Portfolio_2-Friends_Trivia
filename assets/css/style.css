@@ -63,39 +63,33 @@ body {
         transition: all 0.5s;
         cursor: pointer;
     }
-    
-
-    /*.btn:active,
-    .btn:hover:not([disabled]) {
-        background-color:#ffa500b3;
-        color: white;
-    }
-      /*.btn:disabled {
+        
+    /*.button:disabled {
         cursor: no-drop; 
     }
     */
- 
-    .btn:active,
-    .btn:hover {
+
+    .answer-btn:active,
+    .answer-btn:hover {
         background-color:#ffa500b3;
         color: white;
     }
 
-    .hint-btn:active,
-    .hint-btn:hover {
+    #hint:active,
+    #hint:hover {
         color: #3f3a31;
         border-color: #fff;
         background-color:#ffa500
-    }
-
-    .correct,
-    .answerBtn:hover,
-    .btn:hover.correct {
+    }    
+    
+    .correct
+   {
         background-color: rgb(36, 237, 170);
     }
 
-    .incorrect,
-    .answerBtn:hover,
-    .btn:hover.incorrect {
+    .incorrect {
         background-color: rgb(248, 83, 83);
-    }        
+    }  
+
+   
+    
