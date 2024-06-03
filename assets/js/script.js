@@ -1,19 +1,20 @@
-//ensuring thattrivia starts after page fully loads 
+//ensuring trivia starts after page fully loads 
 document.addEventListener("DOMContentLoaded", function () {
-     //get all global variables in one place 
+    //get all global variables in one place 
     const question = document.getElementById("displayed-question");
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
     const scoreDisplay = document.getElementById("score");
+    const hint = document.getElementById("hint");
 
-    let availableQuestions = []; //make copy of question array so that original list will not be affected
+    
+    let availableQuestions = []; //copy of question array so original list is not affected;
     let currentQuestion = {};
     let acceptingAnswers = false;
     let questionCounter = 0;
     let score = 0;
     
-
-    let questions =[
+    const questions =[
         { 
         question: "What song is famously associated with Ross and Rachel's relationship?",
         choice1: "With or Without You",
@@ -52,11 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     ];
 
-    //necessary constants
     const awardedPoints = 1;
     const maxQuestions = 4;
-    //when page (DOM) finished loading - display first question
-    //starting with first question(index 0) making sure it is always 0 at the start  
 
     function startTrivia() {
         availableQuestions = [...questions];
@@ -64,21 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
         score = 0; //reset score to 0;   
         showNewQuestion(); //show the first question
     }
-    //move focus so that mouse is not placed on the button
-    // function moveFocus() {
-    //     const focusTarget = document.getElementById('focus-target');
-    //     if (focusTarget) {
-    //         focusTarget.focus();
-    //     } else {
-    //         document.body.focus();
-    //     }
-    // }
-    //once number of questions is finished go to the end page
-    //inspired by youtube tutorial:
-    // https://www.youtube.com/watch?v=zZdQGs62cR8&list=
-    //PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3
 
-    function showNewQuestion() {//send the user to a end page once they had answered last question
+    function showNewQuestion() {//send the user to an end page once they had answered last question
         if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
             return window.location.assign('/end.html');
         }
@@ -94,16 +79,14 @@ document.addEventListener("DOMContentLoaded", function () {
             const number = answer.dataset["number"];
             answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
             answer.disabled = false;//re-enabling buttons for each question 
-            
+            answer.classList.remove("correct", "incorrect");//remove class once choice is made 
+            clearHint(); 
         });
 
         //making sure used questions do not repeat 
         availableQuestions.splice(currentQuestionIndex, 1);
         acceptingAnswers = true;
     };
-
-        
-
 
     //asigning user click(choice) to coresponded answer
     answers.forEach(answer => {
@@ -123,30 +106,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     incrementScore(awardedPoints);
                 }
                 answers.forEach(button => button.disabled = true); // Disable all buttons
-           
             selectedChoice.classList.add(classToApply); // applying the clss onto the choices
-            
             // displaying the results for 1 sec (1300 milisec.) before removing it and getting next question
             setTimeout(() => {              
-            selectedChoice.classList.remove(classToApply);
+            // selectedChoice.classList.remove(classToApply);
             showNewQuestion();
-            answers.disabled = false;
-            }, 1000); 
-            //once choice is made, option to click is disabled 
+            }, 1500); 
         });
     });
     //hint to display once user clicks on it 
-    let hintClicked = document.getElementById("hint");
-    hintClicked.addEventListener("click", displayHint);
-
+    hint.addEventListener("click", displayHint);
     function displayHint() {
         hint.innerText = currentQuestion["hint"];
-        //sets timer to only display hint for 1.2 econds     
+        //sets timer to only display hint for 1.5 econds     
         setTimeout( () => {
             hint.innerText = "Hint"
-        }, 1200);
+        }, 1500);
     };
 
+    function clearHint() {
+        hint.innerText = "Hint"; // Reset hint text
+    };
+    //increase score by 1 each time class"correct"is added
     incrementScore = num => {
         score += num
         scoreDisplay.innerText = score;

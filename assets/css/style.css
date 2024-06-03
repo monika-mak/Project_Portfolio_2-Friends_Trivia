@@ -71,7 +71,8 @@ body {
         color: white;
     }
     .answer-btn:disabled {
-        cursor: no-drop;
+        cursor: no-drop red;
+  
     }
 
     #hint:active,
