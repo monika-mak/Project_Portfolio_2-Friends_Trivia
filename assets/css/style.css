@@ -40,9 +40,11 @@ body {
     }
 
     #hint {
-        color:#59491d;
+        background-color:#ffa500b3;
+        color: white;
+        /* color:#59491d;
         border: solid 5px #c48b22;
-        background-color:#fff;
+        background-color:#fff; */
     }
     /* #next {
         color:#59491d;
@@ -67,8 +69,11 @@ body {
 
     .answer-btn:active,
     .answer-btn:hover:not([disabled]) {
-        background-color:#ffa500b3;
-        color: white;
+        /* background-color:#ffa500b3;
+        color: white; */
+        color:#59491d;
+        border: solid 5px #c48b22;
+        background-color:#fff;
     }
     .answer-btn:disabled {
         cursor: no-drop red;

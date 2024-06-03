@@ -221,7 +221,7 @@ const questions = [
         choice2: "LaPooh",
         choice3: "Buddy",
         choice4: "Marcel",
-        correctChoice: 2,
+        correctChoice: 1,
         hint: "The dog was hit by an ice cream truck."
     },
     { 

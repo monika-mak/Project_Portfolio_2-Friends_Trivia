@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let score = 0;
 
     const awardedPoints = 1;
-    const maxQuestions = 4;
+    const maxQuestions = 30;
 
     function startTrivia() {
         availableQuestions = [...questions];
