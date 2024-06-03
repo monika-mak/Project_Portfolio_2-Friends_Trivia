@@ -64,15 +64,14 @@ body {
         cursor: pointer;
     }
         
-    /*.button:disabled {
-        cursor: no-drop; 
-    }
-    */
 
     .answer-btn:active,
-    .answer-btn:hover {
+    .answer-btn:hover:not([disabled]) {
         background-color:#ffa500b3;
         color: white;
+    }
+    .answer-btn:disabled {
+        cursor: no-drop;
     }
 
     #hint:active,

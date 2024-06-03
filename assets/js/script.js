@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
     const scoreDisplay = document.getElementById("score");
-    const button = document.getElementsByTagName("button");
 
     let availableQuestions = []; //make copy of question array so that original list will not be affected
     let currentQuestion = {};
@@ -65,7 +64,15 @@ document.addEventListener("DOMContentLoaded", function () {
         score = 0; //reset score to 0;   
         showNewQuestion(); //show the first question
     }
-
+    //move focus so that mouse is not placed on the button
+    // function moveFocus() {
+    //     const focusTarget = document.getElementById('focus-target');
+    //     if (focusTarget) {
+    //         focusTarget.focus();
+    //     } else {
+    //         document.body.focus();
+    //     }
+    // }
     //once number of questions is finished go to the end page
     //inspired by youtube tutorial:
     // https://www.youtube.com/watch?v=zZdQGs62cR8&list=
@@ -86,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
         answers.forEach(answer => {
             const number = answer.dataset["number"];
             answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
+            answer.disabled = false;//re-enabling buttons for each question 
+            
         });
 
         //making sure used questions do not repeat 
@@ -94,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
         
+
+
     //asigning user click(choice) to coresponded answer
     answers.forEach(answer => {
         answer.addEventListener("click", event => {
@@ -111,22 +122,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     classToApply = "correct";
                     incrementScore(awardedPoints);
                 }
-            // answers.forEach(button => {
-            //     button.disabled = true;
-            // });
-        
+                answers.forEach(button => button.disabled = true); // Disable all buttons
+           
             selectedChoice.classList.add(classToApply); // applying the clss onto the choices
+            
             // displaying the results for 1 sec (1300 milisec.) before removing it and getting next question
             setTimeout(() => {              
             selectedChoice.classList.remove(classToApply);
             showNewQuestion();
-            // answers.forEach(button => {
-            //     button.disabled = false;
-            // });
+            answers.disabled = false;
             }, 1000); 
             //once choice is made, option to click is disabled 
-            //document.getElementById("displayed-question").focus(); //coursor focus to be moved once new question is displayed;
-            
         });
     });
     //hint to display once user clicks on it 
