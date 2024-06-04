@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const question = document.getElementById("displayed-question");
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
-    let scoreDisplay = document.getElementById("score");
     const hint = document.getElementById("hint");
     const home = document.getElementById("home");
-    const trackingElements = document.getElementsByClassName("tracking-elements");
+    const trackingElements = Array.from(document.getElementsByClassName("tracking-elements"));
+    let scoreDisplay = document.getElementById("score");
     let reset = document.getElementById("reset");
     
     let availableQuestions = []; //copy of question array so original list is not affected;
@@ -27,19 +27,22 @@ document.addEventListener("DOMContentLoaded", function () {
         scoreDisplay.innerText = score;
         showNewQuestion(); //show the first question
         home.style.display = "none ";
-    }
+    };
 
         reset.addEventListener("click", startTrivia);
         home.addEventListener("click", homeLocation);
+    
 
     function endPage() {
         question.innerText = `"Well Done ! You have reached the end of the Trivia!" <br> Your score is ${score} ! <br> Now, It's time to PIVOT ! `;
         answers.forEach(answer => answer.style.display = "none");
-        trackingElements.style.display = "none";
         hint.style.display = "none";
         home.style.display = "block ";
         reset.innerText = "Play again";
-    }
+        trackingElements.forEach(element=> {  //sets all tracking elements to display property
+            element.style.display = "none";
+        });
+    }; 
 
     function homeLocation() {
         window.location.assign('index.html');
