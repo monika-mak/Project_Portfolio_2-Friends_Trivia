@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const question = document.getElementById("displayed-question");
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
-    const scoreDisplay = document.getElementById("score");
+    let scoreDisplay = document.getElementById("score");
     const hint = document.getElementById("hint");
     const home = document.getElementById("home");
     const trackingElements = document.getElementsByClassName("tracking-elements");
@@ -19,25 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const awardedPoints = 1;
     const maxQuestions = 3;
 
-    reset.addEventListener("click", startTrivia);
 
     function startTrivia() {
         availableQuestions = [...questions];
         questionCounter = 0;
-        score = 0; //reset score to 0;   
+        score= 0; //reset score to 0;   
+        scoreDisplay.innerText = score;
         showNewQuestion(); //show the first question
-        home.style.display = "none";
-    };
+        home.style.display = "none ";
+    }
+
+        reset.addEventListener("click", startTrivia);
+        home.addEventListener("click", homeLocation);
 
     function endPage() {
         question.innerText = `"Well Done ! You have reached the end of the Trivia!" <br> Your score is ${score} ! <br> Now, It's time to PIVOT ! `;
         answers.forEach(answer => answer.style.display = "none");
         trackingElements.style.display = "none";
         hint.style.display = "none";
-        home.style.display ="block";
-        home.addEventListener("click", homeLocation);
+        home.style.display = "block ";
         reset.innerText = "Play again";
     }
+
     function homeLocation() {
         window.location.assign('index.html');
         };
