@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     //get all global variables in one place 
     const welcomePage = document.getElementById("welcome-page");
+    const userNameInput = document.getElementById("user-name"); 
     const startButton = document.getElementById("start-button");
     const triviaContainer = document.getElementById("container");
     const question = document.getElementById("displayed-question");
@@ -23,20 +24,48 @@ document.addEventListener("DOMContentLoaded", function () {
     let username = '';
 
 
+        function welcomePageDisplay() {
+            triviaContainer.style.display = "none"; //hide trivia container when welcome page is displayed    
+            startButton.addEventListener("click", function () {
+            username = userNameInput.value.trim();
+            if(!username) {
+                alert("Please enter your name to start");
+                return;
+            }
+            startTrivia(); 
+        });
+    }
+  
+
+
+    // function welcomePageDisplay() {
+    //     triviaContainer.style.display = "none";  // Hide trivia container initially
+
+    //     startButton.addEventListener("click", function () {
+    //         username = userNameInput.value.trim();
+    //         if (!username) {
+    //             alert("Please enter your name to start");
+    //             return;
+    //         }
+    //         startTrivia();
+    //     });
+    // }
 
     function startTrivia() {
         availableQuestions = [...questions];
         questionCounter = 0;
         score= 0; //reset score to 0;   
         scoreDisplay.innerText = score;
-        // welcomePage.style.display = "none";
-        // triviaContainer.style.display = "none";
-        showNewQuestion(); //show the first question
+        welcomePage.style.display = "none";
+        triviaContainer.style.display = "block";
+        answers.forEach(answer => answer.style.display = "block");
+        hint.style.display = "block";
         home.style.display = "none ";
+        showNewQuestion(); //show the first question
+        
     };
         reset.addEventListener("click", startTrivia);
-        home.addEventListener("click", homeLocation);
-        startButton.addEventListener("click", startTrivia)
+        home.addEventListener("click", startTrivia);
     
 
     function endPage() {
@@ -50,14 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }; 
 
-    function homeLocation() {
-        window.location.assign('index.html');
-        };
+    // function error() {
+    //     window.location.assign('index.html');
+    //     };
   
     function showNewQuestion() {//send the user to an end page once they had answered last question
-        // if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-        //     return window.location.assign('/end.html');
-        // }
         if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
             endPage();
             return;
@@ -133,8 +159,8 @@ document.addEventListener("DOMContentLoaded", function () {
         scoreDisplay.innerText = score;
     };
 
-    startTrivia();
-
+   //calling the welcome page ,hide trivia game 
+    welcomePageDisplay();
 });
 
 
