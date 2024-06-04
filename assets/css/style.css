@@ -14,7 +14,7 @@ body {
     .logo{
         max-width: 90%;
     }
-    .container {
+    #container {
         background-color:#8955b4;
         padding:20px;
     }
@@ -46,7 +46,7 @@ body {
         border: solid 5px #c48b22;
         background-color:#fff; */
     }
-    /* #next {
+    /* #reset {
         color:#59491d;
         border: solid 5px #c48b22;
         background-color:#fff;

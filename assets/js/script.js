@@ -36,21 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
   
-
-
-    // function welcomePageDisplay() {
-    //     triviaContainer.style.display = "none";  // Hide trivia container initially
-
-    //     startButton.addEventListener("click", function () {
-    //         username = userNameInput.value.trim();
-    //         if (!username) {
-    //             alert("Please enter your name to start");
-    //             return;
-    //         }
-    //         startTrivia();
-    //     });
-    // }
-
     function startTrivia() {
         availableQuestions = [...questions];
         questionCounter = 0;
@@ -60,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         triviaContainer.style.display = "block";
         answers.forEach(answer => answer.style.display = "block");
         hint.style.display = "block";
+        reset.innerText = "Reset";
         home.style.display = "none ";
         showNewQuestion(); //show the first question
         
@@ -69,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     function endPage() {
-        question.innerText = `"Well Done ${username} ! You have reached the end of the Trivia!" <br> Your score is ${score} ! <br> Now, It's time to PIVOT ! `;
+        question.innerHTML = `"Well Done ${username}! You have reached the end of the Trivia!<br>Your score is ${score}!<br>Now, It's time to PIVOT ! `;
         answers.forEach(answer => answer.style.display = "none");
         hint.style.display = "none";
         home.style.display = "block ";
