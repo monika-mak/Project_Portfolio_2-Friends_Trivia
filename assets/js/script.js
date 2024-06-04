@@ -1,23 +1,27 @@
 //ensuring trivia starts after page fully loads 
 document.addEventListener("DOMContentLoaded", function () {
     //get all global variables in one place 
+    const welcomePage = document.getElementById("welcome-page");
+    const startButton = document.getElementById("start-button");
+    const triviaContainer = document.getElementById("container");
     const question = document.getElementById("displayed-question");
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
     const hint = document.getElementById("hint");
     const home = document.getElementById("home");
     const trackingElements = Array.from(document.getElementsByClassName("tracking-elements"));
+    const awardedPoints = 1;
+    const maxQuestions = 3;
+
     let scoreDisplay = document.getElementById("score");
     let reset = document.getElementById("reset");
-    
     let availableQuestions = []; //copy of question array so original list is not affected;
     let currentQuestion = {};
     let acceptingAnswers = false;
     let questionCounter = 0;
     let score = 0;
+    let username = '';
 
-    const awardedPoints = 1;
-    const maxQuestions = 3;
 
 
     function startTrivia() {
@@ -25,16 +29,18 @@ document.addEventListener("DOMContentLoaded", function () {
         questionCounter = 0;
         score= 0; //reset score to 0;   
         scoreDisplay.innerText = score;
+        // welcomePage.style.display = "none";
+        // triviaContainer.style.display = "none";
         showNewQuestion(); //show the first question
         home.style.display = "none ";
     };
-
         reset.addEventListener("click", startTrivia);
         home.addEventListener("click", homeLocation);
+        startButton.addEventListener("click", startTrivia)
     
 
     function endPage() {
-        question.innerText = `"Well Done ! You have reached the end of the Trivia!" <br> Your score is ${score} ! <br> Now, It's time to PIVOT ! `;
+        question.innerText = `"Well Done ${username} ! You have reached the end of the Trivia!" <br> Your score is ${score} ! <br> Now, It's time to PIVOT ! `;
         answers.forEach(answer => answer.style.display = "none");
         hint.style.display = "none";
         home.style.display = "block ";
