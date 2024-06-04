@@ -198,13 +198,13 @@ const questions = [
         hint: "He ends up in the hospital after eating it."
     },
     { 
-        question: "What is Rachel's favorite movie?",
+        question: "What is Rachel's actual favorite movie?",
         choice1: "Dangerous Liaisons",
         choice2: "Die Hard",
         choice3: "Weekend at Bernie's",
         choice4: "Pretty Woman",
-        correctChoice: 4,
-        hint: "It's a romantic comedy from 1990."
+        correctChoice: 3,
+        hint: "Revealed during frieds quizz game"
     },
     { 
         question: "What is Chandler's job?",

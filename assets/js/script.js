@@ -60,12 +60,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             //assign class name to correct and incorrect answers so that they can be destinguished.
-            // const classToApply = selectedAnswer == currentQuestion.correctChoice ? "correct" : "incorrect" ; 
-            let classToApply = "incorrect";
-                if (selectedAnswer == currentQuestion.correctChoice) {
-                    classToApply = "correct";
-                    incrementScore(awardedPoints);
+            const classToApply = selectedAnswer == currentQuestion.correctChoice ? "correct" : "incorrect" ; 
+            if (classToApply === "correct") {
+                incrementScore(awardedPoints);
+            } else { 
+                const correctAnswerButton = answers.find(button => button.dataset ["number"] == currentQuestion.correctChoice);
+                if (correctAnswerButton) {
+                    correctAnswerButton.classList.add("correct");
                 }
+            }    
+                
                 answers.forEach(button => button.disabled = true); // Disable all buttons
             selectedChoice.classList.add(classToApply); // applying the clss onto the choices
             // displaying the results for 1 sec (1300 milisec.) before removing it and getting next question
