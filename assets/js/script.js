@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let score = 0;
     let username = '';
 
-
+    //display welcome page
     function welcomePageDisplay() {
         triviaContainer.style.display = "none"; //hide trivia container when welcome page is displayed    
         startButton.addEventListener("click", function () {
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
             startTrivia(); 
         });
     }
-  
+    //start the trivia game
     function startTrivia() {
         availableQuestions = [...questions];
         questionCounter = 0;
@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", function () {
         home.style.display = "none";
         showNewQuestion(); //show the first question
     }
-        reset.addEventListener("click", startTrivia);
-        home.addEventListener("click", startTrivia);
+    reset.addEventListener("click", startTrivia);
+    home.addEventListener("click", startTrivia);
         
-
+    //display the end page
     function endPage() {
         question.innerHTML = `"Well Done ${username}! You have reached the end of the Trivia!<br>Your score is ${score}!<br>Now, It's time to PIVOT ! `;
         answers.forEach(answer => answer.style.display = "none");
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // function error() {
     //     window.location.assign('index.html');
     //     };
-  
+    //show a new question
     function showNewQuestion() {//send the user to an end page once they had answered last question
         if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
             endPage();
@@ -90,12 +90,12 @@ document.addEventListener("DOMContentLoaded", function () {
             clearHint(); 
         });
 
-        //making sure used questions do not repeat 
+        //make sure used questions do not repeat 
         availableQuestions.splice(currentQuestionIndex, 1);
         acceptingAnswers = true;
     }
 
-    //asigning user click(choice) to coresponded answer
+    //asign user click(choice) to coresponded answer
     answers.forEach(answer => {
         answer.addEventListener("click", event => {
             if (!acceptingAnswers) return;
@@ -135,11 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
             hint.innerText = "Hint"
         }, 1500);
     }
-
+    // Resets the hint text
     function clearHint() {
-        hint.innerText = "Hint"; // Resets the hint text
+        hint.innerText = "Hint"; 
     }
-    
+
     //increase score by 1 each time class"correct"is added
     incrementScore = num => {
         score += num
