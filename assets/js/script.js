@@ -148,5 +148,3 @@ document.addEventListener("DOMContentLoaded", function () {
    //calling the welcome page ,hide trivia game 
     welcomePageDisplay();
 });
-
-
