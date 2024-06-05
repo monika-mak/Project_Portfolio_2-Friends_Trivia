@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const awardedPoints = 1;
     const maxQuestions = 3;
 
+
     let scoreDisplay = document.getElementById("score");
     let reset = document.getElementById("reset");
     let availableQuestions = []; //copy of question array so original list is not affected;
@@ -24,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let username = '';
 
 
-        function welcomePageDisplay() {
-            triviaContainer.style.display = "none"; //hide trivia container when welcome page is displayed    
-            startButton.addEventListener("click", function () {
+    function welcomePageDisplay() {
+        triviaContainer.style.display = "none"; //hide trivia container when welcome page is displayed    
+        startButton.addEventListener("click", function () {
             username = userNameInput.value.trim();
             if(!username) {
                 alert("Please enter your name to start");
@@ -39,20 +40,20 @@ document.addEventListener("DOMContentLoaded", function () {
     function startTrivia() {
         availableQuestions = [...questions];
         questionCounter = 0;
-        score= 0; //reset score to 0;   
+        score = 0; //reset score to 0;   
         scoreDisplay.innerText = score;
         welcomePage.style.display = "none";
         triviaContainer.style.display = "block";
         answers.forEach(answer => answer.style.display = "block");
+        trackingElements.forEach(element => element.style.display = "block");
         hint.style.display = "block";
         reset.innerText = "Reset";
-        home.style.display = "none ";
+        home.style.display = "none";
         showNewQuestion(); //show the first question
-        
-    };
+    }
         reset.addEventListener("click", startTrivia);
         home.addEventListener("click", startTrivia);
-    
+        
 
     function endPage() {
         question.innerHTML = `"Well Done ${username}! You have reached the end of the Trivia!<br>Your score is ${score}!<br>Now, It's time to PIVOT ! `;
@@ -60,10 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
         hint.style.display = "none";
         home.style.display = "block ";
         reset.innerText = "Play again";
-        trackingElements.forEach(element=> {  //sets all tracking elements to display property
-            element.style.display = "none";
-        });
-    }; 
+        trackingElements.forEach(element => element.style.display = "none");
+        };
 
     // function error() {
     //     window.location.assign('index.html');
@@ -94,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //making sure used questions do not repeat 
         availableQuestions.splice(currentQuestionIndex, 1);
         acceptingAnswers = true;
-    };
+    }
 
     //asigning user click(choice) to coresponded answer
     answers.forEach(answer => {
@@ -117,33 +116,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }    
                 
-                answers.forEach(button => button.disabled = true); // Disable all buttons
+            answers.forEach(button => button.disabled = true); // Disable all buttons
             selectedChoice.classList.add(classToApply); // applying the clss onto the choices
             // displaying the results for 1 sec (1300 milisec.) before removing it and getting next question
             setTimeout(() => {              
             // selectedChoice.classList.remove(classToApply);
-            showNewQuestion();
+                showNewQuestion();
             }, 1500); 
         });
     });
     //hint to display once user clicks on it 
     hint.addEventListener("click", displayHint);
+
     function displayHint() {
         hint.innerText = currentQuestion["hint"];
         //sets timer to only display hint for 1.5 econds     
         setTimeout( () => {
             hint.innerText = "Hint"
         }, 1500);
-    };
+    }
 
     function clearHint() {
         hint.innerText = "Hint"; // Resets the hint text
-    };
+    }
     //increase score by 1 each time class"correct"is added
     incrementScore = num => {
         score += num
         scoreDisplay.innerText = score;
-    };
+    }
 
    //calling the welcome page ,hide trivia game 
     welcomePageDisplay();

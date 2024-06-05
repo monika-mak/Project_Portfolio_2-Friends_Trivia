@@ -157,13 +157,13 @@ Welcome to the Time Master website. This platform is designed for individuals wh
 
     The project was deployed to GitHub Pages using the following steps...
 
-    1. Log in to GitHub and locate the [time_master_PP1 Repository](https://github.com/monika-mak/time_master_PP1)
+    1. Log in to GitHub and locate the [Friends_Trivia Repository](https://github.com/monika-mak/Project_Portfolio_2-Friends_Trivia).
     2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-        - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
     3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-    4. Under "Source", click the dropdown called "None" and select "Master Branch".
-    5. The page will automatically refresh.
-    6. Scroll back down through the page to locate the now published site [Time Master](https://monika-mak.github.io/time_master_PP1/) in the "GitHub Pages" section.
+    4. Under "Source", click the dropdown called Source is set to 'Deploy from Branch'and select "main".
+    5. Make sure folder is set to / (root).
+    6. Under Branch, click Save.The page will automatically refresh.
+    7. Scroll back down through the page to locate the now published site [Time Master](https://monika-mak.github.io/time_master_PP1/) in the "GitHub Pages" section.
 
     ### Forking the GitHub Repository
 
