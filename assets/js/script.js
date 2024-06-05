@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const trackingElements = Array.from(document.getElementsByClassName("tracking-elements"));
     const awardedPoints = 1;
     const maxQuestions = 3;
+    const simulateErrorButton = document.getElementById("simulate-error");
 
 
     let scoreDisplay = document.getElementById("score");
@@ -36,8 +37,30 @@ document.addEventListener("DOMContentLoaded", function () {
             startTrivia(); 
         });
     }
+    // Redirect to error page
+    function redirectToErrorPage() {
+        window.location.assign('404.html');
+    }
+
+    //this is were an error is handled
+    function handleError(error) {
+        console.error("Attention, an error occured", error);
+        redirectToErrorPage();
+    }
+
+    simulateErrorButton.addEventListener('click', function() {
+        handleError(new Error('Simulated error'));
+    });
+
+
+
+    
+
+
+
     //start the trivia game
     function startTrivia() {
+
         availableQuestions = [...questions];
         questionCounter = 0;
         score = 0; //reset score to 0;   
@@ -64,35 +87,37 @@ document.addEventListener("DOMContentLoaded", function () {
         trackingElements.forEach(element => element.style.display = "none");
         }
 
-    // function error() {
-    //     window.location.assign('index.html');
-    //     };
     //show a new question
-    function showNewQuestion() {//send the user to an end page once they had answered last question
-        if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-            endPage();
-            return;
+    function showNewQuestion() {
+        try {
+            //send the user to an end page once they had answered last question
+            if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
+                endPage();
+                return;
+            }
+                
+            questionCounter++;//takes random int available from the available question 
+            questionCounterDisplay.innerText = `${questionCounter} / ${maxQuestions}`; //display question counter 
+            const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
+            currentQuestion = availableQuestions[currentQuestionIndex];
+            question.innerText = currentQuestion.question;
+
+            //connect each question with the answer set via data-number 
+            //number property is given to match the number value of each question
+            answers.forEach(answer => {
+                const number = answer.dataset["number"];
+                answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
+                answer.disabled = false;//re-enabling buttons for each question 
+                answer.classList.remove("correct", "incorrect");//remove class once choice is made 
+                clearHint(); 
+            });
+
+            //make sure used questions do not repeat 
+            availableQuestions.splice(currentQuestionIndex, 1);
+            acceptingAnswers = true;    
+        }  catch (error) {
+            handleError(error);
         }
-
-        questionCounter++;//takes random int available from the available question 
-        questionCounterDisplay.innerText = `${questionCounter} / ${maxQuestions}`; //display question counter 
-        const currentQuestionIndex = Math.floor(Math.random() * availableQuestions.length);
-        currentQuestion = availableQuestions[currentQuestionIndex];
-        question.innerText = currentQuestion.question;
-
-        //connect each question with the answer set via data-number 
-        //number property is given to match the number value of each question
-        answers.forEach(answer => {
-            const number = answer.dataset["number"];
-            answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
-            answer.disabled = false;//re-enabling buttons for each question 
-            answer.classList.remove("correct", "incorrect");//remove class once choice is made 
-            clearHint(); 
-        });
-
-        //make sure used questions do not repeat 
-        availableQuestions.splice(currentQuestionIndex, 1);
-        acceptingAnswers = true;
     }
 
     //asign user click(choice) to coresponded answer
