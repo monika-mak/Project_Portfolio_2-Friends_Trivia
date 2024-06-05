@@ -7,10 +7,7 @@
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-    </style>
+    <!--font Caveat chosen carefully to mimicc the Friends style font with open sans as a ctylish contrast for redability and ux -->
     
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/9662f847b8.js" crossorigin="anonymous"></script>
@@ -30,14 +27,17 @@
     </header>
     <div id="welcome-page">
         <h1>Welcome to the Friends Trivia Quiz !</h1>
-        <p>The show that always makes you laugh, no matter how many times you watched it. </p>
-        <p>Test your knowledge by answering 30 questions </p>
-        <p>Click the button below to start the quiz </p>
-        <p>If you stuck, click on a  "Hint" button to help you out </p>
-        <p>To reset the game... you guessed it, click on "Reset" button </p>
-        <p>Last but not least, Dont forget to have Fun</p>
-        <input type="text" id = user-name placeholder="Please enter your name"/>
-        <button id = start-button>Start Trivia</button>
+        <div id = "intro-text">
+            <p>Hey there, Friends fan! Ready to test your knowledge with 30 fun questions?</p>
+            <p>If you are stuck, there is a "Hint" button to help you out.</p>
+            <p>Messed up a little? No worries ...  click the "Reset" button .</p>
+            <p>But first, type your name below, so we can get to know eachother :D </p>
+            <p>Click the "Start" well... to start</p>
+            <p>Last but not least, Dont forget to have Fun</p>
+            
+        </div>
+            <input type = "text" id = user-name placeholder="Please enter your name"/>
+            <button id = "start-button">Start Trivia</button>
     </div>
     <div id="container">
         <div class="tracking-elements">
@@ -51,6 +51,7 @@
             </div>
             <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div>
         </div>
+    <!--REMOVE THIS CODE ONCE TESTING IS DONE -->
         <button id="simulate-error">Simulate Error</button>
         <div class="trivia-game">
             <div class = questions-area>

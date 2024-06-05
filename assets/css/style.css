@@ -1,20 +1,62 @@
+/*google style import */
 
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/*  wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* General styles */
 body {
-    display:flex;
-    flex-direction: column;
+    
     background-color: white;
     font-family: "Caveat", cursive;
     color:rgba(6, 6, 6, 0.862);
     text-align: center;
     }
 
-    
+/* Header*/
     .heading{
         text-align: center;
     }
+
     .logo{
-        max-width: 90%;
+        max-width: 95%;
     }
+/*intro-page*/
+    #welcome-page {
+        background-color:#8955b4;
+        padding:20px;
+    }
+
+    #welcome-page h1 {
+        color:white;
+        padding: px;
+    }
+
+    #intro-text {
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 0 0 10px orange; 
+        margin-bottom:20px;
+    }
+    
+    #user-name {
+        padding: 15px;
+        margin: 20px;
+        font-size: 14px;
+        border: 3px solid #fff;
+        border-radius: 5px ;
+        background-color:orange;
+    }
+
+    #start-button {
+        margin:10px;
+        cursor: pointer;
+    }
+/*trivia main-quiz page*/
     #container {
         background-color:#8955b4;
         padding:20px;

@@ -47,15 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Attention, an error occured", error);
         redirectToErrorPage();
     }
-
+    //REMOVE THIS CODE ONCE TESTING IS DONE 
     simulateErrorButton.addEventListener('click', function() {
         handleError(new Error('Simulated error'));
     });
-
-
-
-    
-
 
 
     //start the trivia game
