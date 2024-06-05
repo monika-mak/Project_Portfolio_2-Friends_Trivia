@@ -59,10 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
         question.innerHTML = `"Well Done ${username}! You have reached the end of the Trivia!<br>Your score is ${score}!<br>Now, It's time to PIVOT ! `;
         answers.forEach(answer => answer.style.display = "none");
         hint.style.display = "none";
-        home.style.display = "block ";
+        home.style.display = "block";
         reset.innerText = "Play again";
         trackingElements.forEach(element => element.style.display = "none");
-        };
+        }
 
     // function error() {
     //     window.location.assign('index.html');
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
             endPage();
             return;
-        };
+        }
 
         questionCounter++;//takes random int available from the available question 
         questionCounterDisplay.innerText = `${questionCounter} / ${maxQuestions}`; //display question counter 
@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function clearHint() {
         hint.innerText = "Hint"; // Resets the hint text
     }
+    
     //increase score by 1 each time class"correct"is added
     incrementScore = num => {
         score += num
