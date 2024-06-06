@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
         score = 0; //reset score to 0;   
         scoreDisplay.innerText = score;
         welcomePage.style.display = "none";
-        triviaContainer.style.display = "block";
-        answers.forEach(answer => answer.style.display = "block");
-        trackingElements.forEach(element => element.style.display = "block");
+        triviaContainer.style.display = "flex";
+        answers.forEach(answer => answer.style.display = "flex");
+        trackingElements.forEach(element => element.style.display = "flex");
         hint.style.display = "block";
         reset.innerText = "Reset";
         home.style.display = "none";

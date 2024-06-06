@@ -28,13 +28,17 @@
     <div id="welcome-page">
         <h1>Welcome to the Friends Trivia Quiz !</h1>
         <div id = "intro-text">
-            <p>Hey there, Friends fan! Ready to test your knowledge with 30 fun questions?</p>
-            <p>If you are stuck, there is a "Hint" button to help you out.</p>
-            <p>Messed up a little? No worries ...  click the "Reset" button .</p>
-            <p>But first, type your name below, so we can get to know eachother :D </p>
-            <p>Click the "Start" well... to start</p>
-            <p>Last but not least, Dont forget to have Fun</p>
-            
+            <p>Hey there, Friends fan! Ready to test your knowledge with <b>30 fun questions?</b></p>
+            <br>
+            <p>If you are stuck, there is a <b>"Hint"</b> button to help you out.</p>
+            <br>
+            <p>Messed up a little? No worries ...  click the <b>"Reset"</b> button .</p>
+            <br>
+            <p>But first, <b>enter your name</b> below, so we can get to know eachother :D </p>
+            <br>
+            <p>Click the "Start" well... to <b>start</b></p>
+            <br>
+            <p>Last but not least, Dont forget to <b>have Fun</b></p>
         </div>
             <input type = "text" id = user-name placeholder="Please enter your name"/>
             <button id = "start-button">Start Trivia</button>
@@ -42,14 +46,15 @@
     <div id="container">
         <div class="tracking-elements">
             <div class = "counter">
-                <p class = "counter-text">Question: </p>
+                <h3 class = "counter-text">Question: </h3>
                 <h2 id = "questionCounter"></h2>
             </div>
             <div class = "score-section">
-                <p class = "score-text">Your Score: </p>
-                <h2 id = "score">0</h2>
+                <h2 class = "score-text">Your Score: </h2>
+                <h3 id = "score">0</h3>
             </div>
-            <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div>
+    <!--REMOVE THIS CODE ONCE TESTING IS DONE
+           <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div> -->
         </div>
     <!--REMOVE THIS CODE ONCE TESTING IS DONE -->
         <button id="simulate-error">Simulate Error</button>
