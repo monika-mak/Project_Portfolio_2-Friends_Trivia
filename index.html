@@ -22,11 +22,12 @@
 </head>
 
 <body>
-    <header class="heading">
+    <header>
         <img class="logo" src="assets/images/logo_friends.jpg" alt="logo">
     </header>
-    <div id="welcome-page">
-        <h1>Welcome to the Friends Trivia Quiz !</h1>
+    
+    <div id = "welcome-page" >
+        <h1  class = "heading-style center-content"> Welcome to the Friends Trivia Quiz !</h1>
         <div id = "intro-text">
             <p>Hey there, Friends fan! Ready to test your knowledge with <b>30 fun questions?</b></p>
             <br>
@@ -43,8 +44,8 @@
             <input type = "text" id = user-name placeholder="Please enter your name"/>
             <button id = "start-button">Start Trivia</button>
     </div>
-    <div id="container">
-        <div class="tracking-elements">
+    <div id = "container">
+        <div class="tracking-elements heading-style center-content">
             <div class = "counter">
                 <h3 class = "counter-text">Question: </h3>
                 <h2 id = "questionCounter"></h2>
@@ -66,17 +67,21 @@
                     <button data-number="2" class="answer-btn">answer2</button>
                     <button data-number="3" class="answer-btn">answer3</button>
                     <button data-number="4" class="answer-btn">answer4</button>
-                </div> 
+                </div>
+            </div>     
             <div>
-                <button data-type = "hint-btn" id ="hint">
-                    <i class="fa-regular fa-lightbulb"></i>Hint</button>
-            </div>
-            <div>
-                <button data-type ="reset-btn" id = "reset">Reset</button>
-            </div>
-            <div>
-                <button data-type ="home-btn" id = "home">Home</button>
-            </div>
+                <div class="action-btns center-content">
+                    <button data-type = "hint-btn" id ="hint">
+                        <i class="fa-regular fa-lightbulb"></i>Hint</button>
+                </div>
+                <div>
+                    <button data-type ="reset-btn" id = "reset">Reset</button>
+                </div>
+                <div>
+                    <button data-type ="home-btn" id = "home">Home</button>
+                </div>
+            </div>    
+                
         </div>
     </div>
 
