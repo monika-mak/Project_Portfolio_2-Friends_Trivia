@@ -8,16 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const question = document.getElementById("displayed-question");
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
-    const hint = document.getElementById("hint");
-    const home = document.getElementById("home");
+    const hintButton = document.getElementById("hint");
+    const homeButton = document.getElementById("home");
+    const playButton = document.getElementById("play");
     const trackingElements = Array.from(document.getElementsByClassName("tracking-elements"));
     const awardedPoints = 1;
     const maxQuestions = 3;
+    const HINT_TEXT = "Hint";
     const simulateErrorButton = document.getElementById("simulate-error");
 
 
     let scoreDisplay = document.getElementById("score");
-    let reset = document.getElementById("reset");
+    let resetButton = document.getElementById("reset");
     let availableQuestions = []; //copy of question array so original list is not affected;
     let currentQuestion = {};
     let acceptingAnswers = false;
@@ -64,24 +66,31 @@ document.addEventListener("DOMContentLoaded", function () {
         triviaContainer.style.display = "flex";
         answers.forEach(answer => answer.style.display = "block");
         trackingElements.forEach(element => element.style.display = "flex");
-        hint.style.display = "block";
-        reset.innerText = "Reset";
-        home.style.display = "none";
+        hintButton.style.display = "block";
+        resetButton.style.display = "block";
+        homeButton.style.display = "none";
+        playButton.style.display = "none";
         showNewQuestion(); //show the first question
     }
-    reset.addEventListener("click", startTrivia);
-    home.addEventListener("click", startTrivia);
-        
-    //display the end page
+    resetButton.addEventListener("click", startTrivia);
+    homeButton.addEventListener("click", startTrivia);
+    playButton.addEventListener("click", startTrivia);
+    
     function endPage() {
-        question.innerHTML = `"Well Done ${username}! You have reached the end of the Trivia!<br>Your score is ${score}!<br>Now, It's time to PIVOT ! `;
-        answers.forEach(answer => answer.style.display = "none");
-        hint.style.display = "none";
-        home.style.display = "block";
-        reset.innerText = "Play";
-        trackingElements.forEach(element => element.style.display = "none");
+        // making sure that username and score are defined
+        if (typeof username !== 'undefined' && username !== null && typeof score !== 'undefined') {
+            question.innerHTML = `Great job ${username.toUpperCase()}! You've reached the end of the Trivia!<br>Your score is ${score}!<br>What would you like to do now?`;
+            answers.forEach(answer => answer.style.display = "none");
+            hintButton.style.display = "none";
+            resetButton.style.display = "none";
+            homeButton.style.display = "block";
+            playButton.style.display = "block";
+            trackingElements.forEach(element => element.style.display = "none");
+        } else {
+            console.error("Username or score is not defined.");
         }
-
+    }
+ 
     //show a new question
     function showNewQuestion() {
         try {
@@ -149,15 +158,15 @@ document.addEventListener("DOMContentLoaded", function () {
     hint.addEventListener("click", displayHint);
 
     function displayHint() {
-        hint.innerText = currentQuestion["hint"];
+        hintButton.innerText = currentQuestion["hint"];
         //sets timer to only display hint for 1.5 econds     
         setTimeout( () => {
-            hint.innerText = ["Hint"];
+            hintButton.innerText = ["Hint"];
         }, 1500);
     }
     // Resets the hint text
     function clearHint() {
-        hint.innerText = ["Hint"]; 
+        hintButton.innerText = ["Hint"]; 
     }
 
     //increase score by 1 each time class"correct"is added
