@@ -152,12 +152,12 @@ document.addEventListener("DOMContentLoaded", function () {
         hint.innerText = currentQuestion["hint"];
         //sets timer to only display hint for 1.5 econds     
         setTimeout( () => {
-            hint.innerText = "Hint"
+            hint.innerText = ["Hint"];
         }, 1500);
     }
     // Resets the hint text
     function clearHint() {
-        hint.innerText = "Hint"; 
+        hint.innerText = ["Hint"]; 
     }
 
     //increase score by 1 each time class"correct"is added
