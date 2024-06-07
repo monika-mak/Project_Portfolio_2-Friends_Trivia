@@ -48,13 +48,13 @@
     </div>
     <div id = "container">
         <div class="tracking-elements heading-style center-content">
-            <div class = "counter">
+            <div class = "counter-section">
                 <h3 class = "counter-text">QUESTION:</h3>
-                <h2 id = "questionCounter"></h2>
+                <h2 id = "questionCounter" class = "counter-numbers"></h2>
             </div>
             <div class = "score-section">
-                <h3 class = "score-text">SCORE: </h3>
-                <h2 id = "score">0</h2>
+                <h3 class = "counter-text">SCORE: </h3>
+                <h2 id = "score" class = "counter-numbers">0</h2>
             </div>
     <!--REMOVE THIS CODE ONCE TESTING IS DONE
            <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div> -->
@@ -64,11 +64,15 @@
         <div class="trivia-game">
             <div class = "quiz-area">
                 <h2 id = "displayed-question" tabindex = "0" >Question</h2>
-                <div class = "answer-buttons" >
-                    <button data-number="1" class="answer-btn">answer1</button>
-                    <button data-number="2" class="answer-btn">answer2</button>
-                    <button data-number="3" class="answer-btn">answer3</button>
-                    <button data-number="4" class="answer-btn">answer4</button>
+                <div class = "answer-buttons">
+                    <div class="row1" >
+                        <button data-number="1" class="answer-btn">answer1</button>
+                        <button data-number="2" class="answer-btn">answer2</button>
+                    </div>    
+                    <div class="row2">
+                        <button data-number="3" class="answer-btn">answer3</button>
+                        <button data-number="4" class="answer-btn">answer4</button>
+                    </div>
                 </div>
             </div>     
             <div>

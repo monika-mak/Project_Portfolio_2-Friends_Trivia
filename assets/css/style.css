@@ -78,15 +78,20 @@ body {
 
     #user-name {
         display: flex;
-        padding: 15px;
-        margin: 10px 40px;
-        font-size: 16px;
+        padding: 10px;
+        margin: 10px 20px;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 1.5px;
         border: 3px solid #fff;
-        border-radius: 5px ;
-        background-color:orange;
-        text-transform: capitalize;
+        border-radius: 5px;
+        background-color: orange;
+        text-transform: uppercase;
         text-align: center;
-    }
+        font-family: "Open Sans", sans-serif;
+        }
+    
 
     #container {
         display:flex; 
@@ -97,10 +102,12 @@ body {
     }
 
     .tracking-elements {
-        font-family: "Open-Sans",sans-serif; 
+        
         gap: 50px;
         justify-content: space-around;
-
+    }
+    .counter-numbers {
+        font-size: 2.5em;
     }
     
     .trivia-game {
@@ -138,6 +145,7 @@ body {
         margin: 0px 20%;
         border-color: orange;
         transition: all 0.5s;
+        min-width: 100px;
         cursor: pointer;
     }
     
@@ -168,10 +176,7 @@ body {
         display: flex;
         justify-content: center;
         gap: 10px;
-       
     }
-    
-
 
     #hint:active,
     #hint:hover {
