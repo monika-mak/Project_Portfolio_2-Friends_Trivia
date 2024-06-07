@@ -18,22 +18,15 @@ body {
     font-family: "Caveat", cursive;
     color:rgba(6, 6, 6, 0.862);
     text-align: center;
-    height: 100vh;
-    }
+    height: 100%;
+}
 
     /* Header*/
   
     .logo{
         max-width: 100%;
         max-height: 20vh;
-        padding: 15px 10px;
-     
-    }
-    
-    .heading-style { 
-        min-height: 1.7em;
-        padding: 10px;
-
+        padding: 5px 10px;
     }
 
     /*trivia main-quiz page*/
@@ -44,8 +37,13 @@ body {
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
+    .heading-style { 
+        padding: 10px;
+
+    }
+
 
 /*intro-page*/
     #welcome-page {
@@ -74,6 +72,7 @@ body {
 
     .action-btn {
         margin: 15px;
+        min-width: 5em;
     }
 
     #user-name {
@@ -94,14 +93,16 @@ body {
     
 
     #container {
-        display:flex; 
         flex-direction: column;
+        justify-content: space-around;
+        padding:15px;
         background-color:#8955b4;
       
     }
 
     .tracking-elements {
         justify-content: space-between;
+        margin: 0px 1em;
     }
 
     .counter-numbers {
@@ -121,42 +122,33 @@ body {
         gap: 20px;
       }
 
-
     #displayed-question {
-        color:black;
-        padding: 20px;
+        color: black;
+        margin: 5% 0%;
         border: solid 5px white;
-        border-radius:10px;
+        border-radius: 25px;
         background-color: orange;
+        padding: 5px;
     }
-    
+
     button {
         font-size: 1.5rem;
         padding: 10px 10px;
         background-color: white;
         border: solid 3px;
         border-radius: 30px;
-        margin: 0px 20%;
         border-color: orange;
         transition: all 0.5s;
         min-width: 100px;
         cursor: pointer;
-    }
+        margin:5px;
+    }    
     
     .answer-buttons {
-        display:flex;
+        display: flex;
+        margin: 15px 10%;
         flex-direction: column;
-        align-items: center;
     }
-
-    /*.answer-btn:active,
-    .answer-btn:hover:not([disabled]) {
-        /* background-color:#ffa500b3;
-        color: white; */
-        /* color:#59491d;
-        border: solid 5px #c48b22;
-        background-color:#fff; 
-    }*/
 
     .answer-btn:disabled {
         cursor: not-allowed;
@@ -165,36 +157,78 @@ body {
     .action-buttons {
         display: flex;
         justify-content: center;
-        gap: 10px;
+    } 
+
+    #hint {
+        border-color: #fff;
+        border: solid white 5px;
+        background-color: #ffa500;
+        box-shadow: inset 3px -1px 3px rgba(0, 0, 0, 0.5);
     }
 
-    #hint:active,
+   
     #hint:hover {
-        color: #3f3a31;
+        box-shadow: inset 2px 2px 5px rgba(34, 32, 32, 0.842);
+        transform: translateY(2px);
         border-color: #fff;
-        background-color:#ffa500
-    }    
+        background-color: #ffa500; /* Ensure it stays orange on active */
+    } 
+
+    #hint:active {
+        transform: translateY(2px);
+        border-color: #fff;
+        background-color: #ffa500; /* Ensure it stays orange on active */
+    }
+
+    button:hover {
+        cursor: pointer;
+        box-shadow: inset 2px 2px 5px rgba(138, 150, 32, 0.623);
+        transform: translateY(2px);
+        transition: transform 150ms;
+        border-color: #fff;
+        background-color: #5f5543; /* Ensure it stays orange on active */   
+    }
+    button[disabled]:hover {
+        cursor: not-allowed;
+        box-shadow: none;
+        transform:none;
+    }
     
-    .correct
-   {
+    .correct {
         background-color: rgb(36, 237, 170);
     }
 
     .incorrect {
         background-color: rgb(248, 83, 83);
-    }  
+    } 
+
 
     /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
+    .heading-style {
+        min-height: 2em;
+        padding: 0;
+    }
+    .tracking-elements {
+        justify-content: space-between;
+        font-size: 1.5em;
+        margin: 0px 3em;
+    }
+    #displayed-question {
+       
+        margin: 5% 10%;
+    }
+
     .intro-action-elements {
         /* stretch buttons to fit bigger screen*/
         margin: 0px 10vw;
+
     }
 }
 
-
-/*Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px) {
+    /*Large devices (laptops and desktops, 992px and up) */
+    @media screen and (min-width: 992px) {
     
     }
 

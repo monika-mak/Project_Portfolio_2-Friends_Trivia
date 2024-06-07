@@ -47,7 +47,7 @@
         </div>
     </div>
     <div id = "container">
-        <div class="tracking-elements heading-style">
+        <div class="tracking-elements">
             <div class = "counter-section">
                 <h3 class = "counter-text">QUESTION:</h3>
                 <h2 id = "questionCounter" class = "counter-numbers"></h2>
@@ -59,20 +59,14 @@
     <!--REMOVE THIS CODE ONCE TESTING IS DONE
            <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div> -->
         </div>
-    <!--REMOVE THIS CODE ONCE TESTING IS DONE -->
-        <button id="simulate-error">Simulate Error</button>
         <div class="trivia-game">
             <div class = "quiz-area">
-                <h2 id = "displayed-question" tabindex = "0" >Question</h2>
+                <h1 id = "displayed-question" tabindex = "0" >Question</h1>
                 <div class = "answer-buttons">
-                    <div class="row1" >
-                        <button data-number="1" class="answer-btn">answer1</button>
-                        <button data-number="2" class="answer-btn">answer2</button>
-                    </div>    
-                    <div class="row2">
-                        <button data-number="3" class="answer-btn">answer3</button>
-                        <button data-number="4" class="answer-btn">answer4</button>
-                    </div>
+                    <button data-number="1" class="answer-btn">answer1</button>
+                    <button data-number="2" class="answer-btn">answer2</button>
+                    <button data-number="3" class="answer-btn">answer3</button>
+                    <button data-number="4" class="answer-btn">answer4</button>
                 </div>
             </div>     
             <div>
@@ -84,6 +78,8 @@
                 </div>
             </div>    
         </div>
+        <!--REMOVE THIS CODE ONCE TESTING IS DONE -->
+        <button id="simulate-error">Simulate Error</button>
     </div>
 
 <script src="assets/js/questions.js"></script>
