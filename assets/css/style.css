@@ -37,10 +37,10 @@ body {
     }
 
     p {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
-    .heading-style { 
-        padding: 10px;
+    .heading-style {
+        padding: 8px;
     }
 
 
@@ -58,9 +58,9 @@ body {
 
     #intro-text {
         background-color: white;
-        padding: 1.5em;
-        box-shadow: 0 0 0 10px orange; 
-        margin: 10px 0 ;
+        padding: 15px 1em;
+        box-shadow: 0 0 0 10px orange;
+        margin: 5px 0;
     }
 
     .intro-action-buttons {
@@ -131,8 +131,7 @@ body {
     }
 
     button {
-        
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding: 10px 10px;
         background-color: white;
         border: solid 3px;
@@ -208,10 +207,13 @@ body {
         min-height: 2em;
         padding: 0;
     }
+    #user-name {
+        margin: 10px 13em; 
+    }
     .tracking-elements {
         justify-content: space-between;
         font-size: 1.5em;
-        margin: 0px 10em;
+        margin: 0px 4em;
     }
 
     #displayed-question {
@@ -224,6 +226,9 @@ body {
     .intro-action-elements {
         /* stretch buttons to fit bigger screen*/
         margin: 0px 10vw;
+    }
+    .action-btn {
+        min-width: 10em;
     }
 }
 
