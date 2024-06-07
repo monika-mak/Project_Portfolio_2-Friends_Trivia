@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scoreDisplay.innerText = score;
         welcomePage.style.display = "none";
         triviaContainer.style.display = "flex";
-        answers.forEach(answer => answer.style.display = "flex");
+        answers.forEach(answer => answer.style.display = "block");
         trackingElements.forEach(element => element.style.display = "flex");
         hint.style.display = "block";
         reset.innerText = "Reset";
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         answers.forEach(answer => answer.style.display = "none");
         hint.style.display = "none";
         home.style.display = "block";
-        reset.innerText = "Play again";
+        reset.innerText = "Play";
         trackingElements.forEach(element => element.style.display = "none");
         }
 

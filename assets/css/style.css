@@ -24,29 +24,19 @@ body {
   
     .logo{
         max-width: 100%;
-        max-height: 10em;
-        padding: 5px 10px;
+        max-height: 20vh;
+        padding: 15px 10px;
      
     }
     
-    .heading { 
-        min-height: 2.5em;
+    .heading-style { 
+        min-height: 1.7em;
+        padding: 10px;
     }
+
     /*trivia main-quiz page*/
-    #container {
-        display:flex; 
-        flex-direction: column;
-        background-color:#8955b4;
-        padding:20px;
-    }
-
-/*intro-page*/
-    #welcome-page {
-        background-color:#8955b4;
-        padding:20px 0;
-    }
-
     h1, h2, h3 {
+        font-family: "Caveat", cursive;
         color:white;
         text-align: center; 
     }
@@ -55,6 +45,13 @@ body {
         font-size: 1.5rem;
     }
 
+/*intro-page*/
+    #welcome-page {
+        background-color:#8955b4;
+
+    }
+
+    
     .center-content {
         display: flex;
         justify-content: center;
@@ -65,77 +62,116 @@ body {
         background-color: white;
         padding: 15px;
         box-shadow: 0 0 0 10px orange; 
-        margin-bottom:20px;
-        margin-top:25px;
+        margin-bottom:10px;
+        margin-top:10px;
     }
-    
+
+    .intro-action-elements{
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .action-btn {
+        margin: 15px;
+    }
+
     #user-name {
+        display: flex;
         padding: 15px;
-        margin: 20px;
-        font-size: 14px;
+        margin: 10px 40px;
+        font-size: 16px;
         border: 3px solid #fff;
         border-radius: 5px ;
         background-color:orange;
         text-transform: capitalize;
+        text-align: center;
     }
 
-    #start-button {
-        cursor: pointer;
-    }
-/* trivia main-quiz page
     #container {
         display:flex; 
         flex-direction: column;
         background-color:#8955b4;
         padding:20px;
-    } */
+        gap: 20px;
+    }
 
     .tracking-elements {
-        font-family: Montserrat;
-        display: flex;
-        gap: 15px;
+        font-family: "Open-Sans",sans-serif; 
+        gap: 50px;
+        justify-content: space-around;
+
     }
     
     .trivia-game {
         display: flex; 
+        flex-direction: column;
         justify-content:space-evenly;
         align-items:center;
+        gap: 20px;
     }
+
+    .quiz-area {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
 
     #displayed-question {
         display:flex;
+        flex-direction: column;
+        justify-content: center;
         color:black;
-        padding: 20px 20px;
+        padding: 20px;
         border: solid 5px white;
-        margin: 0px 10%;
         border-radius:10px;
         background-color: orange;
     }
     
     button {
         font-size: 1.5rem;
-        padding:10px 10px;
-        background-color:white;
-        border:solid 3px;
-        border-radius:30px;
+        padding: 10px 10px;
+        background-color: white;
+        border: solid 3px;
+        border-radius: 30px;
         margin: 0px 20%;
-        border-color:orange;
+        border-color: orange;
         transition: all 0.5s;
         cursor: pointer;
     }
     
-    .answer-btn:active,
+    .answer-buttons {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .answer-btn {
+        display: flex;
+    }
+    /*.answer-btn:active,
     .answer-btn:hover:not([disabled]) {
         /* background-color:#ffa500b3;
         color: white; */
-        color:#59491d;
+        /* color:#59491d;
         border: solid 5px #c48b22;
-        background-color:#fff;
-    }
+        background-color:#fff; 
+    }*/
 
     .answer-btn:disabled {
-        cursor: no-drop red;
+        cursor: not-allowed;
     }
+
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+       
+    }
+    
+
 
     #hint:active,
     #hint:hover {
@@ -153,21 +189,7 @@ body {
         background-color: rgb(248, 83, 83);
     }  
 
-    #hint {
-        background-color:#ffa500b3;
-        color: white;
-        color:#59491d;
-        border: solid 5px #c48b22;
-        background-color:#fff; 
-    }
-
-    #reset {
-        color:#59491d;
-        border: solid 5px #c48b22;
-        background-color:#fff;
-        cursor:pointer;
-        display: block;
-    } 
+   
 
    
     

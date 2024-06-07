@@ -41,18 +41,20 @@
             <br>
             <p>Last but not least, Dont forget to <b>have Fun</b></p>
         </div>
-            <input type = "text" id = user-name placeholder="Please enter your name"/>
-            <button id = "start-button">Start Trivia</button>
+        <div class = "intro-action-elements">
+            <input type = "text" id = user-name class ="action-btn" placeholder="Please enter your name"/>
+            <button id = "start-button" class ="action-btn">Start Trivia</button>
+        </div>
     </div>
     <div id = "container">
         <div class="tracking-elements heading-style center-content">
             <div class = "counter">
-                <h3 class = "counter-text">Question: </h3>
+                <h3 class = "counter-text">QUESTION:</h3>
                 <h2 id = "questionCounter"></h2>
             </div>
             <div class = "score-section">
-                <h2 class = "score-text">Your Score: </h2>
-                <h3 id = "score">0</h3>
+                <h3 class = "score-text">SCORE: </h3>
+                <h2 id = "score">0</h2>
             </div>
     <!--REMOVE THIS CODE ONCE TESTING IS DONE
            <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div> -->
@@ -60,7 +62,7 @@
     <!--REMOVE THIS CODE ONCE TESTING IS DONE -->
         <button id="simulate-error">Simulate Error</button>
         <div class="trivia-game">
-            <div class = questions-area>
+            <div class = "quiz-area">
                 <h2 id = "displayed-question" tabindex = "0" >Question</h2>
                 <div class = "answer-buttons" >
                     <button data-number="1" class="answer-btn">answer1</button>
@@ -70,18 +72,13 @@
                 </div>
             </div>     
             <div>
-                <div class="action-btns center-content">
-                    <button data-type = "hint-btn" id ="hint">
+                <div class="action-buttons">
+                    <button data-type = "hint-btn" id ="hint" class = "action-btn">
                         <i class="fa-regular fa-lightbulb"></i>Hint</button>
-                </div>
-                <div>
-                    <button data-type ="reset-btn" id = "reset">Reset</button>
-                </div>
-                <div>
-                    <button data-type ="home-btn" id = "home">Home</button>
+                    <button data-type ="reset-btn" id = "reset" class = "action-btn">Reset</button>
+                    <button data-type ="home-btn" id = "home" class = "action-btn">Home</button>
                 </div>
             </div>    
-                
         </div>
     </div>
 
