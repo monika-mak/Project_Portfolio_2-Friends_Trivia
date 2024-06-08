@@ -17,7 +17,7 @@ body {
     color:rgba(6, 6, 6, 0.862);
     text-align: center;
     height: 100%;
-/*min-height:100vh;*/
+    min-height:100vh;
 }
 
 /* Header*/
@@ -39,7 +39,6 @@ p {
     font-size: 1.4em;
 }
 .heading-style {
-    font-size: 2.5em;
     padding: 10px;
     min-height: 100px;
 }
@@ -48,7 +47,8 @@ p {
 /*intro-page*/
 #welcome-page {
     background-color:#8955b4;
-    height: 100vh;
+    min-height: 80vh;
+
 }
 
 
@@ -61,10 +61,13 @@ p {
 #intro-text {
     background-color: white;
     padding: 15px 1em;
-    box-shadow: 0 0 0 10px orange;
     margin: 5px 0;
 }
 
+hr {
+    border-top: 10px solid orange;
+}
+    
 .intro-action-buttons {
     padding: 10px 0;
     display: flex;
@@ -95,7 +98,7 @@ p {
 
 
 #container {
-    height: 100vh;
+    min-height: 80vh;
     flex-direction: column;
     justify-content: space-around;
     padding:15px;
@@ -225,7 +228,7 @@ button:hover:not([disabled]) {
 @media screen and (min-width: 768px) {
 
 .heading-style {
-    min-height: 3em;
+    min-height: 13vh;
     padding: 0;
 }
 

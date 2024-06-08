@@ -33,7 +33,7 @@ const questions = [
         choice3: "His clothes",
         choice4: "His car",
         correctChoice: 2,
-        hint: "Joey doesn't share food!"
+        hint: "it involves a sandwich"
     },
     { 
         question: "What is the name of Joey's stuffed penguin?",
@@ -98,14 +98,14 @@ const questions = [
         correctChoice: 2,
         hint: "He often disapproves of Rachel's life choices."
     },
-    { 
-        question: "What does Monica do for a living?",
-        choice1: "Chef",
-        choice2: "Teacher",
-        choice3: "Photographer",
-        choice4: "Writer",
-        correctChoice: 1,
-        hint: "She is very passionate about cooking."
+    {
+        question: "What does Ross say when he tries to move his couch?",
+        choice1: "Rotate!",
+        choice2: "Swivel!",
+        choice3: "Pivot!",
+        choice4: "Turn!",
+        correctChoice: 3,
+        hint: "It's a very famous scene involving stairs."
     },
     { 
         question: "What is the name of Ross's pet monkey?",
@@ -143,14 +143,14 @@ const questions = [
         correctChoice: 2,
         hint: "He moved out before Joey moved in."
     },
-    { 
-        question: "What is the name of Phoebe's birth mother?",
-        choice1: "Lily",
-        choice2: "Ursula",
-        choice3: "Phoebe",
-        choice4: "Alice",
+    {
+        question: "Where did Chandler run away to when escaping Janice?",
+        choice1: "Paris",
+        choice2: "London",
+        choice3: "Yemen",
+        choice4: "Rome",
         correctChoice: 3,
-        hint: "She lives in Montauk."
+        hint: "He chose a place where he couldn't be found easily."
     },
     { 
         question: "What holiday does Chandler hate?",
@@ -179,14 +179,14 @@ const questions = [
         correctChoice: 2,
         hint: "It happened in a dark college party."
     },
-    { 
-        question: "What instrument does Phoebe play?",
-        choice1: "Guitar",
-        choice2: "Piano",
-        choice3: "Drums",
-        choice4: "Violin",
+    {
+        question: "What is the name of Phoebe's most famous song?",
+        choice1: "Smelly Cat",
+        choice2: "Sticky Shoes",
+        choice3: "Lather, Rinse, Repeat",
+        choice4: "Little Black Curly Hair",
         correctChoice: 1,
-        hint: "She often plays it at Central Perk."
+        hint: "It's about a feline with an odor problem."
     },
     { 
         question: "What fruit is Ross allergic to?",
@@ -206,14 +206,14 @@ const questions = [
         correctChoice: 3,
         hint: "Revealed during frieds quizz game"
     },
-    { 
-        question: "What is Chandler's job?",
-        choice1: "IT Procurement Manager",
-        choice2: "Statistical Analysis and Data Reconfiguration",
-        choice3: "Transponster",
+    {
+        question: "What job does Chandler do?",
+        choice1: "Data Analyst",
+        choice2: "Transponster",
+        choice3: "IT Procurement Manager",
         choice4: "Advertising Executive",
-        correctChoice: 2,
-        hint: "Even his friends don't understand it."
+        correctChoice: 3,
+        hint: "Even Chandler's friends struggle to remember it."
     },
     { 
         question: "What was the name of Ross and Monica's dog when they were kids?",
@@ -233,24 +233,24 @@ const questions = [
         correctChoice: 2,
         hint: "It was the only solution to her pain."
     },
-    { 
-        question: "Who plays Dr. Drake Ramoray on Days of Our Lives?",
-        choice1: "Ross",
-        choice2: "Joey",
-        choice3: "Chandler",
-        choice4: "Gunther",
+    {
+        question: "What was the name of Rachel's hairless cat?",
+        choice1: "Mr. Bigglesworth",
+        choice2: "Whiskers",
+        choice3: "Mrs. Whiskerson",
+        choice4: "Fluffy",
+        correctChoice: 3,
+        hint: "It looked more like a naked mole rat than a cat."
+    },
+    {
+        question: "What holiday armadillo was Ross dressed as?",
+        choice1: "Christmas",
+        choice2: "Hanukkah",
+        choice3: "Thanksgiving",
+        choice4: "New Year’s",
         correctChoice: 2,
-        hint: "It's Joey's acting role."
-    },
-    { 
-        question: "What does Rachel name her daughter?",
-        choice1: "Emma",
-        choice2: "Emily",
-        choice3: "Ella",
-        choice4: "Evie",
-        correctChoice: 1,
-        hint: "Ross suggests the name."
-    },
+        hint: "It was to teach Ben about a Jewish holiday."
+    }
     { 
         question: "Who gets stuck in an ATM vestibule with a supermodel?",
         choice1: "Ross",
