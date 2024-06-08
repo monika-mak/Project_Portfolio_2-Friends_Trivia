@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const playButton = document.getElementById("play");
     const trackingElements = Array.from(document.getElementsByClassName("tracking-elements"));
     const awardedPoints = 1;
-    const maxQuestions = 3;
+    const maxQuestions = 30;
     const HINT_TEXT = "Hint";
     const simulateErrorButton = document.getElementById("simulate-error");
 

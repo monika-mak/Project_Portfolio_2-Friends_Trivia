@@ -250,7 +250,7 @@ const questions = [
         choice4: "New Year’s",
         correctChoice: 2,
         hint: "It was to teach Ben about a Jewish holiday."
-    }
+    },
     { 
         question: "Who gets stuck in an ATM vestibule with a supermodel?",
         choice1: "Ross",
@@ -258,6 +258,7 @@ const questions = [
         choice3: "Joey",
         choice4: "Monica",
         correctChoice: 2,
+        
         hint: "The model's name is Jill Goodacre."
     },
     { 
