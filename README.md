@@ -1,31 +1,33 @@
 
-<h1 align="center">Time Master Website </h1>
+<h1 align="center">Friends Trivia Quiz</h1>
 
 
-Link to deployed site: [Time Master](https://monika-mak.github.io/time_master_PP1/)
+Link to deployed site: [Friends Trivia Quiz](https://monika-mak.github.io/Project_Portfolio_2-Friends_Trivia/)
 
 ![Am I responsive](readme_documents/responsive.png)
 
 
-Welcome to the Time Master website. This platform is designed for individuals who often find themselves saying, "there are never enough hours in the day." It aims to tackle common productivity issues by addressing the excuses we tell ourselves, providing a support system through powerful tips and insights for better time management. 
+Welcome to the Friends Trivia Quiz website. This platform is designed for fans of the TV show "Friends" who want to test their knowledge about the series. It aims to provide an engaging and fun way to revisit memorable moments and details from the show.
 
 - #### First Time Visitor Goals
-1. Understand the main purpose of the site and learn about productivity.
-2. Identify personal productivity challenges and discover resources to improve time management.
-3. Navigate the site easily to find relevant information.
+1. Understand the main purpose of the site and learn about the Friends trivia quiz.
+2. Identify the different themes questions available.
+3. Navigate the site easily to start the quiz or learn more about it.
+4. Experience a flashback into the shows great moments.
 
 #### Returning Visitor Goals
-1. Recap impactful productivity strategies.
-2. Access interactive tools to enhance daily productivity.
+1. Access new or updated quiz questions.
+2. Switch off from an everyday life and have fun. 
+3. Check for any new features or updates related to the quiz.
 
 #### Frequent User Goals
-1. Stay updated with new productivity techniques or tools.
-2. Regularly review effective productivity strategies.
+1. Stay updated with new trivia questions.
+2. Regularly review and improve trivia knowledge.
 
 -   ### Design
     -   #### Colour Scheme
-        - The website uses a palette of green, white,and orange along with some charcolar and red. All colors were carefuly designed and matched for good contrast. 
-        ![Colors](readme_documents/color_collection.png)
+        - The website uses a palette of purple and orange. Colors were carefully selected to bring the user back into the famous apartment with the iconic purple door with a golden frame. 
+        ****![Colors](readme_documents/color_collection.png)***
        
     -   #### Typography
         -   Open Sans is the primary font, chosen for its readability and modern appearance. 
@@ -49,7 +51,6 @@ Welcome to the Time Master website. This platform is designed for individuals wh
 
     ### Header and Navigation Bar
     - **Responsiveness:** The navigation bar is responsive, adjusting to different device screens. 
-        On mobile devices, it transforms into a hamburger menu to save space and maintain usability.
     - **Logo and Branding:** The Time Master logo is prominently displayed on the left side of the navigation bar, 
         reinforcing the brand on every page.
     - **Navigation Links:** Easy-to-access links for Home, Features, Tips, and Contact 
