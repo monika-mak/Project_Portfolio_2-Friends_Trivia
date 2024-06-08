@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function endPage() {
         // making sure that username and score are defined
         if (typeof username !== 'undefined' && username !== null && typeof score !== 'undefined') {
-            question.innerHTML = `Great job ${username.toUpperCase()}! You've reached the end of the Trivia!<br>Your score is ${score}!<br>What would you like to do now?`;
+            question.innerHTML = `Great job ${username.toUpperCase()}!<br> You've reached the end of the Trivia!<br>Your score is ${score}!<br>What would you like to do now?`;
             answers.forEach(answer => answer.style.display = "none");
             hintButton.style.display = "none";
             resetButton.style.display = "none";
@@ -161,12 +161,12 @@ document.addEventListener("DOMContentLoaded", function () {
         hintButton.innerText = currentQuestion["hint"];
         //sets timer to only display hint for 1.5 econds     
         setTimeout( () => {
-            hintButton.innerText = ["Hint"];
+            hintButton.innerText = "Hint";
         }, 1500);
     }
     // Resets the hint text
     function clearHint() {
-        hintButton.innerText = ["Hint"]; 
+        hintButton.innerText = "Hint"; 
     }
 
     //increase score by 1 each time class"correct"is added
