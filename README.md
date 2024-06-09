@@ -45,21 +45,30 @@ Welcome to the Friends Trivia Quiz website. This platform is designed for fans o
     -  Contact and tips mockup     -[View](readme_documents/wireframe4.png)
 
     ## Features
-       Time Master Website Feature Overview
+       Friends Trivia Quiz Feature Overview
 
     ## Website Structure and Navigation
 
-    ### Header and Navigation Bar
-    - **Responsiveness:** The navigation bar is responsive, adjusting to different device screens. 
-    - **Logo and Branding:** The Time Master logo is prominently displayed on the left side of the navigation bar, 
-        reinforcing the brand on every page.
-    - **Navigation Links:** Easy-to-access links for Home, Features, Tips, and Contact 
+    ### Header 
+    - **Responsiveness:** The header includes trivia logo, it is responsive, adjusting to different device screens. 
+    - **Logo and Branding:** The Friends Trivia Quiz logo is prominently displayed on the top of the page, reinforcing the theme on every page.
+    - **Welcome Page:** On the arival of the page, user is welcomed with the message that descirbes the game and gives helpful tips.
+        Easy-to-access links for Home, Quiz, Scores, and Contact sections ensure users can navigate the site with minimal effort. 
         sections ensure users can navigate the site with minimal effort.
 
     ### Hero Image
     - **Visual Appeal:** A large, engaging hero image captures attention on the home page, 
         along with the bold multicoloured text setting a motivational tone with a clock visual to emphasize time management.
 
+
+
+
+Navigation Links: 
+Hero Image
+Visual Appeal: A large, engaging hero image captures attention on the home page, setting a fun and engaging tone with visuals related to the Friends TV show.
+Main Content and List Items
+Content Layout: The main content is designed to be engaging and straightforward, guiding users to start the quiz or explore more about the site.
+Excuses Lists: Features and tips are presented in list formats with icons or bullet points for easy reading and quick comprehension.
 
     ### Main Content and List Items
     - **Content Layout:** The main content Starts with qualifying users for further exploration, 

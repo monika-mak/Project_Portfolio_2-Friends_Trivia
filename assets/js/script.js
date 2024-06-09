@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const trackingElements = Array.from(document.getElementsByClassName("tracking-elements"));
     const awardedPoints = 1;
     const maxQuestions = 30;
-    const HINT_TEXT = "Hint";
     const simulateErrorButton = document.getElementById("simulate-error");
 
 
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         score = 0; //reset score to 0;   
         scoreDisplay.innerText = score;
         welcomePage.style.display = "none";
-        triviaContainer.style.display = "flex";
+        triviaContainer.style.display = "block";
         answers.forEach(answer => answer.style.display = "block");
         trackingElements.forEach(element => element.style.display = "flex");
         hintButton.style.display = "block";

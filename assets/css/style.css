@@ -12,7 +12,7 @@
 body {
     display:flex;
     flex-direction: column;
-    background-color: white;
+    background-color:white;
     font-family: "Caveat", cursive;
     color:rgba(6, 6, 6, 0.862);
     text-align: center;
@@ -22,10 +22,10 @@ body {
 
 /* Header*/
   
-.logo{
+.logo, header {
     max-width: 100%;
     max-height: 20vh;
-    padding: 5px 5px;
+    padding: 0px 5px;
 }
 
 /*trivia main-quiz page*/
@@ -39,27 +39,31 @@ p {
     font-size: 1.5em;
 }
 
+
 .heading {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 15vh;
+    margin: 0px 10%;
 }
 
 
 /*intro-page*/
 #welcome-page {
-    background-color:#8955b4;
     min-height: 80vh;
+    background-color:#8955b4;
 }
 
 #intro-text {
+    min-height: 35vh;
     background-color: white;
-    padding: 2em 1em;
+    padding: 3em 1em;
     margin: 5px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
 
 }
 
@@ -80,9 +84,8 @@ hr {
 
 #user-name {
     display: flex;
-    padding: 10px;
-    margin: 10px 20px;
-    font-size: 1em;
+    height: 3em;
+    margin: 10px 8%;
     color: #323d48;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -93,23 +96,17 @@ hr {
     text-align: center;
     font-family: "Open Sans", sans-serif;
     box-shadow: -2px 2px 12px 0px rgba(34, 32, 32, 0.842);
-    }
+}
 
 #container {
     min-height: 80vh;
     flex-direction: column;
     justify-content: space-around;
-    padding:15px;
     background-color:#8955b4; 
 }
 
 .tracking-elements {
     justify-content: space-between;
-    margin: 0px 1em;
-}
-
-.counter-numbers {
-    font-size: 2.5em;
 }
 
 .trivia-game {
@@ -126,7 +123,7 @@ hr {
 
 #displayed-question {
     color: black;
-    margin: 5% 0%;
+    margin: 5% 5%;
     border: solid 5px white;
     border-radius: 25px;
     background-color: orange;
@@ -226,26 +223,25 @@ button:hover:not([disabled]) {
     padding: 0 5px;
 }
 
+/* @media screen and (min-width: 425px) {
+    .heading {
+        margin:0 15%;
+    }
+} */
+
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-
-.heading-style {
-    min-height: 13vh;
-    padding: 0;
-}
 
 /* #intro-text {
     height: 26em;
     margin: 10px 0;
 } */
 
-#user-name {
-    margin: 10px 13em; 
-}
 
 .tracking-elements {
     justify-content: space-between;
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 0px 4em;
 }
 
