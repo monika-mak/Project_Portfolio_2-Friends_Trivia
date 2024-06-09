@@ -21,15 +21,15 @@ body {
 }
 
 /* Header*/
-  
 .logo, header {
     max-width: 100%;
     max-height: 20vh;
+    min-height: 10vh;
     padding: 0px 5px;
 }
 
 /*trivia main-quiz page*/
-h1, h2, h3 {
+h1, h2 {
     color:white;
     text-align: center; 
     letter-spacing: 1px;
@@ -51,7 +51,7 @@ p {
 
 /*intro-page*/
 #welcome-page {
-    min-height: 80vh;
+    min-height: 90vh;
     background-color:#8955b4;
 }
 
@@ -99,7 +99,7 @@ hr {
 }
 
 #container {
-    min-height: 80vh;
+    min-height: 90vh;
     align-content: center;
     flex-direction: column;
     justify-content: space-around;
@@ -217,37 +217,27 @@ button:hover:not([disabled]) {
 /*Error Page 404*/
 
 .error {
-    padding: 1em;
-    max-height: 40vh;
-    max-width: 100%;
-    height: auto;
+    margin-top: 60px;
+    max-width: 32vh;
+}
+
+#error-page {
+    margin-top:20px;
 }
 
 #error-page h1,
 #error-page h2,
-#error-page p
- {
+#error-page p {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 60px 4px 50px 4px;
     color: black;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    padding: 0 5px;
 }
-
-/* @media screen and (min-width: 425px) {
-    .heading {
-        margin:0 15%;
-    }
-} */
 
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-
-/* #intro-text {
-    height: 26em;
-    margin: 10px 0;
-} */
-
 
 .tracking-elements {
     justify-content: space-between;
@@ -263,8 +253,8 @@ button:hover:not([disabled]) {
     margin: 15px 18%;
 }
 
+/* stretch buttons to fit bigger screen*/
 .intro-action-elements {
-    /* stretch buttons to fit bigger screen*/
     margin: 0px 10vw;
 }
 
