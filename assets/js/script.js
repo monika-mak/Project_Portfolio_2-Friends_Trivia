@@ -1,10 +1,10 @@
-//ensuring trivia starts after page fully loads 
+//ensuring quiz starts after page fully loads 
 document.addEventListener("DOMContentLoaded", function () {
     //get all global variables in one place 
     const welcomePage = document.getElementById("welcome-page");
     const userNameInput = document.getElementById("user-name"); 
     const startButton = document.getElementById("start-button");
-    const triviaContainer = document.getElementById("container");
+    const quizContainer = document.getElementById("container");
     const question = document.getElementById("displayed-question");
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //display welcome page
     function welcomePageDisplay() {
-        triviaContainer.style.display = "none"; //hide trivia container when welcome page is displayed    
+        quizContainer.style.display = "none"; //hide trivia container when welcome page is displayed    
 
         startButton.addEventListener("click", function () {
             username = userNameInput.value.trim();
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
             setUpAnswers()
-            startTrivia(); 
+            startQuiz(); 
         });
     }
     // Redirect to error page
@@ -56,14 +56,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    //start the trivia game
-    function startTrivia() {
+    //start the quiz game
+    function startQuiz() {
         availableQuestions = [...questions];
         questionCounter = 0;
         score = 0; //reset score to 0;   
         scoreDisplay.innerText = score;
         welcomePage.style.display = "none";
-        triviaContainer.style.display = "block";
+        quizContainer.style.display = "block";
         answers.forEach(answer => answer.style.display = "block");
         trackingElements.forEach(element => element.style.display = "flex");
         hintButton.style.display = "block";
@@ -74,8 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /**
-     * 
-     * 
+     function that shows final score along with the user name 
+     and it prompts user to take the next action  
      */
     function endQuiz() {
         // making sure that username and score are defined
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
      answers.forEach(answer => {
         answer.addEventListener("click", event => {
             if (!acceptingAnswers) return;
-
+            
             acceptingAnswers = false;  //creating a slight delay with chosing answers 
             const selectedChoice = event.target; //targeting where user clicked 
             const selectedAnswer = selectedChoice.dataset["number"];
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     correctAnswerButton.classList.add("correct");
                 }
             }    
-                
+              
             answers.forEach(button => button.disabled = true); // Disable all buttons
             selectedChoice.classList.add(classToApply); // applying the clss onto the choices
             // displaying the results for 1 sec (1300 milisec.) before removing it and getting next question
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
    }
-
+    //function to display hint when "hint"button is clicked 
     function displayHint() {
         hintText.innerText = currentQuestion["hint"];
         //sets timer to only display hint for 1.5 econds     
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to go back to the welcome page
     function goToWelcomePage() {
-        triviaContainer.style.display = "none"; // Hide the trivia container
+        quizContainer.style.display = "none"; // Hide the trivia container
         welcomePage.style.display = "block"; // Show the welcome page
         question.innerHTML = ""; // Clear the question text
         hintText.innerText = "Hint"; // Reset the hint text
@@ -188,9 +188,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //hint to display once user clicks on it 
     hintButton.addEventListener("click", displayHint);
-    resetButton.addEventListener("click", startTrivia);
+    resetButton.addEventListener("click", startQuiz);
     homeButton.addEventListener("click", goToWelcomePage);
-    playButton.addEventListener("click", startTrivia);
+    playButton.addEventListener("click", startQuiz);
 
    //calling the welcome page ,hide trivia game 
     welcomePageDisplay();
