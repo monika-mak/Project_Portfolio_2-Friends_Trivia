@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
     const hintButton = document.getElementById("hint");
-    const hintText = document.getElementById("hint-text")
+    const hintText = document.getElementById("hint-text");
     const homeButton = document.getElementById("home");
     const playButton = document.getElementById("play");
     const trackingElements = Array.from(document.getElementsByClassName("tracking-elements"));
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Set answer text and reset button states
             answers.forEach(answer => {
-                const number = answer.dataset["number"];
+                const number = answer.dataset.number;
                 answer.innerText = currentQuestion["choice" + number]; //corresponded answer is matched with question 
                 answer.disabled = false;//re-enable buttons for each question 
                 answer.classList.remove("correct", "incorrect");// Remove previous classes
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             acceptingAnswers = false;  // Prevent multiple answers
             const selectedChoice = event.target; // Get clicked element 
-            const selectedAnswer = selectedChoice.dataset["number"];
+            const selectedAnswer = selectedChoice.dataset.number;
 
 
             //assign class name to correct and incorrect answers so that they can be destinguished.
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 incrementScore(awardedPoints);
             } else { 
                 // Highlight the correct answer
-                const correctAnswerButton = answers.find(button => button.dataset ["number"] == currentQuestion.correctChoice);
+                const correctAnswerButton = answers.find(button => button.dataset.number == currentQuestion.correctChoice);
                 if (correctAnswerButton) {
                     correctAnswerButton.classList.add("correct");
                 }
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
    }
     //Display hint when "hint"button is clicked 
     function displayHint() {
-        hintText.innerText = currentQuestion["hint"];
+        hintText.innerText = currentQuestion.hint;
         //sets timer to only display hint for 1.5 econds     
         setTimeout( () => {
             hintText.innerText = "Hint";
@@ -163,9 +163,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //increase score by given number (1) each time class"correct"is added
     const incrementScore = num => {
-        score += num
+        score += num;
         scoreDisplay.innerText = score; // Update score display
-    }
+    };
 
     // Function to go back to the welcome page
     function goToWelcomePage() {
