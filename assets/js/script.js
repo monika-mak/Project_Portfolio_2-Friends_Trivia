@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //display welcome page
     function welcomePageDisplay() {
         triviaContainer.style.display = "none"; //hide trivia container when welcome page is displayed    
+
         startButton.addEventListener("click", function () {
             username = userNameInput.value.trim();
             if(!username) {
@@ -175,10 +176,20 @@ document.addEventListener("DOMContentLoaded", function () {
         scoreDisplay.innerText = score;
     }
 
+    // Function to go back to the welcome page
+    function goToWelcomePage() {
+        triviaContainer.style.display = "none"; // Hide the trivia container
+        welcomePage.style.display = "block"; // Show the welcome page
+        question.innerHTML = ""; // Clear the question text
+        hintText.innerText = "Hint"; // Reset the hint text
+        userNameInput.value="";//Clear username value input
+        scoreDisplay.innerText = 0; // Reset the score display
+    }
+
     //hint to display once user clicks on it 
     hintButton.addEventListener("click", displayHint);
     resetButton.addEventListener("click", startTrivia);
-    homeButton.addEventListener("click", startTrivia);
+    homeButton.addEventListener("click", goToWelcomePage);
     playButton.addEventListener("click", startTrivia);
 
    //calling the welcome page ,hide trivia game 
