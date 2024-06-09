@@ -39,7 +39,7 @@ p {
     font-size: 1.5em;
 }
 
-
+/*heading*/
 .heading {
     display: flex;
     justify-content: space-around;
@@ -48,8 +48,7 @@ p {
     margin: 0px 10%;
 }
 
-
-/*intro-page*/
+/*intro-welcome page*/
 #welcome-page {
     min-height: 90vh;
     background-color:#8955b4;
@@ -64,9 +63,8 @@ p {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
 }
-
+/*stylish line at the top and bottom of displayed questions*/
 hr {
     border-top: 10px solid orange;
 }
@@ -82,6 +80,7 @@ hr {
     min-width: 5em;
 }
 
+/*user input section */
 #user-name {
     display: flex;
     height: 3em;
@@ -110,11 +109,13 @@ hr {
     justify-content: space-between;
 }
 
-.trivia-game {
+/*quiz section*/
+.full-game-section {
     display: flex; 
     flex-direction: column;
     justify-content:space-evenly;
     align-items:center;
+    padding-bottom: 30px;
 }
 
 .quiz-area {
@@ -144,6 +145,7 @@ hr {
     height:auto!important;
 }
 
+/* all buttons*/
 button {
     font-size: 1.4rem;
     padding: 10px 10px;
@@ -206,6 +208,7 @@ button:hover:not([disabled]) {
     background-color: #ffa500; /* Ensure it stays orange on active */
 }
 
+/*classes for highlighting the correct and incorrect answers*/
 .correct {
     background-color: rgb(36, 237, 170);
 }
@@ -215,7 +218,6 @@ button:hover:not([disabled]) {
 } 
 
 /*Error Page 404*/
-
 .error {
     margin-top: 60px;
     max-width: 32vh;

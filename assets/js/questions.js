@@ -1,3 +1,4 @@
+/*quiz questions array with answers and hints*/
 const questions = [
     { 
         question: "What song is famously associated with Ross and Rachel's relationship?",
