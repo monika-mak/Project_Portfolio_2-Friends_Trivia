@@ -100,9 +100,10 @@ hr {
 
 #container {
     min-height: 80vh;
+    align-content: center;
     flex-direction: column;
     justify-content: space-around;
-    background-color:#8955b4; 
+    background-color:#8955b4;
 }
 
 .tracking-elements {
@@ -123,6 +124,10 @@ hr {
 
 #displayed-question {
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7em;
     margin: 5% 5%;
     border: solid 5px white;
     border-radius: 25px;
@@ -132,6 +137,11 @@ hr {
     font-weight: 600;
     text-transform: capitalize;
     box-shadow: 3px 5px 13px 1px rgb(0 0 0 / 64%);
+}
+
+/*class to set the size of the end message only*/
+.end-message {
+    height:auto!important;
 }
 
 button {
@@ -263,13 +273,6 @@ button:hover:not([disabled]) {
 }
 
 }
-
-/* Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-
-}
-
-
 
 
 

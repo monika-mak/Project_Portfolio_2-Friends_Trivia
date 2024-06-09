@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
             homeButton.style.display = "block";
             playButton.style.display = "block";
             trackingElements.forEach(element => element.style.display = "none");
+            question.classList.add('end-message'); // Add the class to set the size of the end message
         } else {
             alert("Opps, something went wrong, please try again");
         }
