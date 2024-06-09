@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const answers = Array.from(document.getElementsByClassName("answer-btn"));
     const questionCounterDisplay = document.getElementById("questionCounter");
     const hintButton = document.getElementById("hint");
+    const hintText = document.getElementById("hint-text")
     const homeButton = document.getElementById("home");
     const playButton = document.getElementById("play");
     const trackingElements = Array.from(document.getElementsByClassName("tracking-elements"));
     const awardedPoints = 1;
-    const maxQuestions = 30;
+    const maxQuestions = 2;
     const simulateErrorButton = document.getElementById("simulate-error");
-
 
     let scoreDisplay = document.getElementById("score");
     let resetButton = document.getElementById("reset");
@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Please enter your name to start");
                 return;
             }
+            setUpAnswers()
             startTrivia(); 
         });
     }
@@ -56,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //start the trivia game
     function startTrivia() {
-
         availableQuestions = [...questions];
         questionCounter = 0;
         score = 0; //reset score to 0;   
@@ -71,11 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
         playButton.style.display = "none";
         showNewQuestion(); //show the first question
     }
-    resetButton.addEventListener("click", startTrivia);
-    homeButton.addEventListener("click", startTrivia);
-    playButton.addEventListener("click", startTrivia);
-    
-    function endPage() {
+
+    /**
+     * 
+     * 
+     */
+    function endQuiz() {
         // making sure that username and score are defined
         if (typeof username !== 'undefined' && username !== null && typeof score !== 'undefined') {
             question.innerHTML = `Great job ${username.toUpperCase()}!<br> You've reached the end of the Trivia!<br>Your score is ${score}!<br>What would you like to do now?`;
@@ -86,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
             playButton.style.display = "block";
             trackingElements.forEach(element => element.style.display = "none");
         } else {
-            console.error("Username or score is not defined.");
+            alert("Opps, something went wrong, please try again");
         }
     }
  
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             //send the user to an end page once they had answered last question
             if (availableQuestions.length === 0 || questionCounter >= maxQuestions) {
-                endPage();
+                endQuiz();
                 return;
             }
                 
@@ -123,8 +124,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    //asign user click(choice) to coresponded answer
-    answers.forEach(answer => {
+   function setUpAnswers () {
+     //asign user click(choice) to coresponded answer
+     answers.forEach(answer => {
         answer.addEventListener("click", event => {
             if (!acceptingAnswers) return;
 
@@ -153,26 +155,31 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 1500); 
         });
     });
-    //hint to display once user clicks on it 
-    hint.addEventListener("click", displayHint);
+   }
 
     function displayHint() {
-        hintButton.innerText = currentQuestion["hint"];
+        hintText.innerText = currentQuestion["hint"];
         //sets timer to only display hint for 1.5 econds     
         setTimeout( () => {
-            hintButton.innerText = "Hint";
+            hintText.innerText = "Hint";
         }, 1500);
     }
     // Resets the hint text
     function clearHint() {
-        hintButton.innerText = "Hint"; 
+        hintText.innerText = "Hint"; 
     }
 
     //increase score by 1 each time class"correct"is added
-    incrementScore = num => {
+    const incrementScore = num => {
         score += num
         scoreDisplay.innerText = score;
     }
+
+    //hint to display once user clicks on it 
+    hintButton.addEventListener("click", displayHint);
+    resetButton.addEventListener("click", startTrivia);
+    homeButton.addEventListener("click", startTrivia);
+    playButton.addEventListener("click", startTrivia);
 
    //calling the welcome page ,hide trivia game 
     welcomePageDisplay();

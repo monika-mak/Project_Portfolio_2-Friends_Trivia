@@ -28,6 +28,7 @@
 </head>
 <body>
     <header>
+        <!--Logo -->
         <img class="logo" src="assets/images/logo_friends.jpg" alt="logo">
     </header>
     <!--intro page-->
@@ -48,12 +49,15 @@
             <p>But first, <b>ENTER YOUR NAME</b> below.</p>
         </div>
         <hr>
+        <!--welcome page action buttons sction-->
         <div class = "intro-action-buttons">
             <input type = "text" id = user-name class ="action-btn" placeholder="Please enter your name"/>
             <button id = "start-button" class ="action-btn">Start Trivia</button>
         </div>
     </div>
+    <!--container with full quiz section-->
     <div id = "container">
+        <!--score and counter tracking section -->
         <div class="tracking-elements heading" >
             <div class = "counter-section">
                 <h2 class = "counter-text">QUESTION:</h2>
@@ -63,8 +67,6 @@
                 <h2 class = "counter-text">SCORE: </h2>
                 <h1 id = "score" class = "counter-numbers">0</h1>
             </div>
-    <!--REMOVE THIS CODE ONCE TESTING IS DONE
-           <div class="timer"><i class="fa-regular fa-hourglass-half"></i></div> -->
         </div>
         <div class="trivia-game">
             <div class = "quiz-area">
@@ -78,7 +80,11 @@
             </div>     
             <div>
                 <div class="action-buttons">
-                    <button data-type = "hint-btn" id ="hint" class = "action-btn"><i class="fa-regular fa-lightbulb"></i>Hint</button>
+                    <!-- hint button to display the icon and text when called in js-->
+                    <button data-type = "hint-btn" id ="hint" class = "action-btn">
+                        <i class="fa-regular fa-lightbulb"></i>
+                        <span id = "hint-text">Hint</span>
+                    </button>
                     <button data-type ="reset-btn" id = "reset" class = "action-btn">Reset</button>
                     <button data-type ="play-btn" id = "play" class = "action-btn">Play</button>
                     <button data-type ="home-btn" id = "home" class = "action-btn">Home</button>
