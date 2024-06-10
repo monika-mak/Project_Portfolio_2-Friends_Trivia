@@ -28,8 +28,8 @@
 </head>
 <body>
     <header>
-        <!--Logo -->
-        <img class="logo" src="assets/images/logo_friends.jpg" alt="logo">
+        <!--Logo with added size for better website load -->
+        <img class="logo" src="assets/images/logo_friends.jpg" alt="logo" width="1920" height="376">
     </header>
     <!--intro page-->
     <div id = "welcome-page">
@@ -95,8 +95,10 @@
         </div>
     </div>
 
-<script src="assets/js/questions.js"></script>
-<script src="assets/js/script.js"></script>
+ <!-- Defer JavaScript -->
+ <!-- Using the defer attribute in the script tags to improve page load performance:-->
+ <script src="assets/js/questions.js" defer></script>
+ <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
