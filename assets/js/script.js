@@ -126,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const selectedChoice = event.target; // Get clicked element 
             const selectedAnswer = selectedChoice.dataset.number;
 
-
             //assign class name to correct and incorrect answers so that they can be destinguished.
             const classToApply = selectedAnswer == currentQuestion.correctChoice ? "correct" : "incorrect" ; 
             if (classToApply === "correct") {
