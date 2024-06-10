@@ -4,7 +4,7 @@ Link to deployed site: [Friends Trivia Quiz](https://monika-mak.github.io/Projec
 
 ![Am I responsive](readme_documents/responsively-screenshots/Am_I_responsive_main.png)
 
-Welcome to the Friends Trivia Quiz website. This platform is designed for fans of the TV show "Friends" who want to test their knowledge about the series. It aims to provide an engaging and fun way to revisit memorable moments and details from the show.
+This website  is designed to bring fun and excitement. Created for the true fans of the TV show "Friends" who want to test their knowledge about the series. It aims to provide an engaging and fun way to revisit memorable moments and details from the show.
 
 ## UX
 
@@ -86,39 +86,41 @@ The main concept of creating the logo was to bring the user back in time to thei
 ### Quiz Section
 
 - **Visual Appeal:** The quiz logo appears at the top of the page, consistently maintaining the feel of the show. In the top left corner, under the logo, is a counter number where the current question number is displayed out of 10. In the top right corner, under the logo, there is a score counter with the number of correct answers. 
-Below the scores, in the center, a random question is displayed with four possible choices to choose from. Underneath the answer options, on the left, there is a hint button styled nicely with a lightbulb icon. 
-Beside the hint button, there is a reset button where the user can start the game over. 
+Below the scores, in the center, a random question is displayed with four possible answers to choose from. Underneath the answer options, on the left, there is a hint button styled nicely with a lightbulb icon. 
+Beside the hint button, there is a reset button where the user can start over. 
 Each button has a pointer configured to appear once the user scrolls over on larger screen sizes.
 
     *Quiz Game* - [View](readme_documents/responsively-screenshots/visual_page_2.jpeg)
-- **Correct / incorrect feedback:** - when incorrect answer is selected the option button turns red. The correct answer also turns green for the imediate feedback to the user.  
-- Once an answer is selected the options are then disabled so correct score is recorded 
-    *Correct / Incorrect Answers* - [View](readme_documents/responsively-screenshots/answers%20correct_incorrect.png)
+- **Correct / incorrect answer (feedback):** 
+when an incorrect answer is selected the option button turns red. The correct answer also turns green for the imediate feedback to the user.  
+- Once an answer is selected the options are then disabled so correct score is recorded.
+
+    *Correct / Incorrect Answer* - [View](readme_documents/responsively-screenshots/answers_correct_incorrect.png)
 
 #### End Game Page and Results
 
 - **Message:** The user is congratulated with a personalized message and their score, informed that they have reached the end of the game, and directed to choose either to play again or go back to the home page.
-- Results Page - [View](readme_documents/responsively-screenshots/visual_page_3.jpeg)
+- *Results Page* - [View](readme_documents/responsively-screenshots/visual_page_3.jpeg)
 #### Error Page
 
 - **Error Message:** This page was designed for learning purposes; no try and catch error needed as there are no external applications used for the purpose of this quiz.
-Error Page - [View](readme_documents/error-page-screenshot.png)
-### Functional Highlights
+- *Error Page* - [View](readme_documents/error-page-screenshot.png)
+### Functional Highlights ( All above tested and worked well)
 
-- **User Input:** Where the user inserts their name.
-- **Start Button:** The user needs to act on whether or not they want to start the quiz.
-- **Multiple Choice Section:** The user selects one of four available answers to the displayed question.
-- **Hint Button:** Hint to the displayed question is shown.
-- **Reset:** Where the user resets the game.
+- **User Input:** Where the user inserts their name, if no name is inserted, the pop up message appears from the top of the page. 
+- **Start Button:** The user needs to act on whether or not they want to start the quiz, this function brings user to start of the quiz. 
+- **Multiple Choice Section:** The user selects one of four available answers to the displayed question, color coded answers will display accordignally ( green for correct, red for oncorrect and the green will also display)
+- **Hint Button:** Hint to the displayed question is shown( after clicking it , a message with the hint  will pop up)
+- **Reset:** Where user can start from the first question, this function sucesfully clears score counter and quetion counter. 
 - **Play Button:** Brings the user back to the start of the game.
-- **Start Button:** Brings the user back to the home page.
+- **Home Button:** Brings the user back to the home page, where user needs to put their name again. Perfect for multiple users. 
 
 ## Future Enhancements
 
 - **Timer:** Implementation of a timer for increased difficulty.
 - **Difficulty Level:** Adding questions with options for various levels of difficulties (easy, medium, hard).
-- **Aesthetics:** A nice looking pop-up message when the user hasn't inserted their name would be a nice touch.
-- **Community Features:** Options for users to save their scores, share their results, and compete with others via a leaderboard.
+- **Esthetics:** A nice looking pop-up message when the user hasn't inserted their name would be a nice touch.
+- **Community Features:** Options for users to save their scores, share their results on social platforms and compete with others via a leaderboard.
 
 ## Resources and Tools Used
 
@@ -132,11 +134,13 @@ Error Page - [View](readme_documents/error-page-screenshot.png)
 
 - [Google Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for troubleshooting, testing features, and solving issues related to responsiveness and styling.
 - [GitHub](https://github.com/) - Used to save and store the project files.
-- [Adobe Firefly](https://www.adobe.com/products/firefly.html) - Utilized to generate AI-enhanced images (Hero Image).
+
 
 ### Image and Color Resources
 
 - [Photopea](https://www.photopea.com/) - Used for logo creation.
+- [Responsively](https://responsively.app/) - used to capture ewebsite responsivenes. 
+- [Browserstack](https://www.browserstack.com/) - used to test browser responsivenes. 
 - [Tiny PNG](https://tinypng.com/) - Compressed images to optimize website performance.
 - [Favicon.io](https://favicon.io/) - Tool used to create the website's favicon.
 - [Coolors](https://coolors.co/) - Assisted in creating a modern, matching color palette.
@@ -223,9 +227,28 @@ Error Page - [View](readme_documents/error-page-screenshot.png)
 - The Lighthouse test for desktop passed 96%; readable rapport available here  [rapport](readme_documents/lighthouse_testing/lighthouse_desktop_rapport.html).
 
 
-### Testing User Stories from User Experience (UX) Section
+### Browser Testing 
 
-The website has been tested on multiple browsers (Chrome, Firefox, Safari) and on mobile, tablet, and desktop devices. User testing was conducted to ensure that navigation is intuitive and the site meets the needs outlined in user stories.
+- The website has been tested on multiple browsers: Chrome- main, Firefox, Safari ,Edge and Opera with no errors or bugs. 
+
+
+    <details><summary>Browser Testing</summary>
+
+    *Edge*
+
+    ![Edge](/readme_documents/browsers_test/bs_macson_Edge_125.0.jpg)
+
+    *Firefox*
+
+    ![Firefox](/readme_documents/browsers_test/bs_macson_Firefox_123.0.jpg)
+
+    *Safari*
+
+    ![Safari](/readme_documents/browsers_test/safari_browser_test.jpg)
+
+    *Opera*
+
+    ![SOpera](/readme_documents/browsers_test/bs_macson_Opera_110.0.jpg)
 
 ### Further Testing
 
@@ -261,28 +284,32 @@ By forking the GitHub Repository, we make a copy of the original repository on o
 
 ### Idea
 
-The game was inspired by my son who loves "Friends" and my own personal love for that show that made me laugh for so many years.
+The game was inspired by my son who loves "Friends" and my own personal love for that show which made me laugh for so many years.
 
 ### Content
 
 Content was inspired mainly by the tutorials below:
-- [Code Institute - Love Maths Project Walkthrough]
+- Code Institute : Love Maths Project Walkthrough
 - [How To Make Quiz App Using JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8&t=1741s)
 - [Build a Quiz App](https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF)
+- readme - some inspiration taken from KevinFlanagan7/Masters-quiz/main/README.md, thank you Kevin. 
 
 ### Learning and Support Resources
 
 - [W3Schools](https://www.w3schools.com/) - For learning and practice.
 - [YouTube](https://www.youtube.com/) - To source a deeper understanding of concepts.
 - [Code Institute](https://codeinstitute.net/) - To structure and support learnings.
-- [ChatGPT](https://openai.com/chatgpt) - For quick information support when needed.
+- [ChatGPT](https://openai.com/chatgpt) - generating questions, quick information support when needed.
 - [Perplexity AI](https://www.perplexity.ai/) - For a focused source of information in one place.
 - [Study Music, Concentration, Focus](https://www.youtube.com/results?search_query=study+music+concentration+focus) - To keep me calm during work.
+
+### Personal comments and learnings 
+-This was quite a journey and i am aware that bugs should be recorded in the readme, saying that I trust that section would take 3 days to complete and i hope commit history will be a great resource of it. Many of the issues I had found were simple semicolons or naming mistakes and some were as complicated as function being connected incorreclty. Once one bug was fixed another appeared which made the learning really deep.  
 
 ### Acknowledgements
 
 A massive shout-out to:
 
-- Amy Richardson - for constant support as well as great advice throughout the process.
-- Femi - my mentor who utilized our meetings very well, giving constructive feedback and excellent practice.
+- Amy Richardson again, thank you for your constant support as well as great advices and tips given throughout the process.
+- Femi - my mentor who utilized our meetings very well, giving constructive feedback and excellent practice, your feedback is always very powerful and to the point.
 - Huge thanks to the tutor support and community. It was a great help to feel like I am not here alone.
