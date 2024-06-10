@@ -1,8 +1,8 @@
-<h1 align="center">Friends Trivia Quiz</h1>
-
-Link to deployed site: [Friends Trivia Quiz](https://monika-mak.github.io/Project_Portfolio_2-Friends_Trivia/)
+# Friends Trivia Quiz
 
 ![Am I responsive](readme_documents/responsively-screenshots/Am_I_responsive_main.png)
+
+Visit the deployed site here: [Friends Trivia Quiz](https://monika-mak.github.io/Project_Portfolio_2-Friends_Trivia/)
 
 This website  is designed to bring fun and excitement. Created for the true fans of the TV show "Friends" who want to test their knowledge about the series. It aims to provide an engaging and fun way to revisit memorable moments and details from the show.
 
@@ -10,18 +10,18 @@ This website  is designed to bring fun and excitement. Created for the true fans
 
 ### User Stories
 
-**As a user I:**
+**As a user, I:**
 
-* Want the quiz to be responsive to my devices.
-* Want clear instructions on how to navigate through the quiz.
-* Want to know how many questions are there.
-* Want to know if I selected the correct answer.
-* Want to get help if I am stuck on a question.
-* Want to be able to reset the quiz if I made a mistake.
-* Want to know what question number I am on during the quiz.
-* Want to know my score during the quiz.
-* Want to know what the correct answer is if I selected the wrong answer.
-* Want to know my final score.
+- Want the quiz to be responsive to my devices.
+- Want clear instructions on how to navigate through the quiz.
+- Want to know how many questions there are.
+- Want to know if I selected the correct answer.
+- Want to get help if I am stuck on a question.
+- Want to be able to reset the quiz if I made a mistake.
+- Want to know what question number I am on during the quiz.
+- Want to know my score during the quiz.
+- Want to know what the correct answer is if I selected the wrong answer.
+- Want to know my final score.
 
 ### First Time Visitor Goals
 
@@ -44,9 +44,10 @@ This website  is designed to bring fun and excitement. Created for the true fans
 
 ### Colour Scheme
 
-The website uses a palette of purple, orange, and white. Colors were carefully selected to bring the user back into the famous apartment with the iconic purple door with a golden frame.
+The website uses a palette of purple, orange, and white. These colors were carefully selected to evoke the famous apartment with the iconic purple door with a golden frame.
 
-- [Colors](readme_documents/colors.png)
+- ![Colors](readme_documents/colors.png)
+
 
 ### Typography
 
@@ -85,67 +86,63 @@ The main concept of creating the logo was to bring the user back in time to thei
 
 ### Quiz Section
 
-- **Visual Appeal:** The quiz logo appears at the top of the page, consistently maintaining the feel of the show. In the top left corner, under the logo, is a counter number where the current question number is displayed out of 10. In the top right corner, under the logo, there is a score counter with the number of correct answers. 
-Below the scores, in the center, a random question is displayed with four possible answers to choose from. Underneath the answer options, on the left, there is a hint button styled nicely with a lightbulb icon. 
-Beside the hint button, there is a reset button where the user can start over. 
-Each button has a pointer configured to appear once the user scrolls over on larger screen sizes.
+- **Visual Appeal:** The quiz logo appears at the top of the page. On the left under the logo, a counter displays the current question number out of 10. On the right, a score counter shows the number of correct answers. Below the scores, a random question is displayed with four possible answers. Underneath the answers, there are hint and reset buttons.
+  - ![Quiz Game](readme_documents/responsively-screenshots/visual_page_2.jpeg)
+- **Feedback:** When an incorrect answer is selected, the option button turns red, and the correct answer turns green. Once an answer is selected, the options are disabled to ensure the correct score is recorded.
+  - ![Correct / Incorrect Answer](readme_documents/responsively-screenshots/answers_correct_incorrect.png)
 
-    *Quiz Game* - [View](readme_documents/responsively-screenshots/visual_page_2.jpeg)
-- **Correct / incorrect answer (feedback):** 
-when an incorrect answer is selected the option button turns red. The correct answer also turns green for the imediate feedback to the user.  
-- Once an answer is selected the options are then disabled so correct score is recorded.
+### End Game Page and Results
 
-    *Correct / Incorrect Answer* - [View](readme_documents/responsively-screenshots/answers_correct_incorrect.png)
+- **Message:** The user is congratulated with a personalized message and their score, informed that they have reached the end of the game, and given options to play again or go back to the home page.
+  - ![Results Page](readme_documents/responsively-screenshots/visual_page_3.jpeg)
 
-#### End Game Page and Results
-
-- **Message:** The user is congratulated with a personalized message and their score, informed that they have reached the end of the game, and directed to choose either to play again or go back to the home page.
-- *Results Page* - [View](readme_documents/responsively-screenshots/visual_page_3.jpeg)
 #### Error Page
 
 - **Error Message:** This page was designed for learning purposes; no try and catch error needed as there are no external applications used for the purpose of this quiz.
 - *Error Page* - [View](readme_documents/error-page-screenshot.png)
-### Functional Highlights ( All above tested and worked well)
 
-- **User Input:** Where the user inserts their name, if no name is inserted, the pop up message appears from the top of the page. 
-- **Start Button:** The user needs to act on whether or not they want to start the quiz, this function brings user to start of the quiz. 
-- **Multiple Choice Section:** The user selects one of four available answers to the displayed question, color coded answers will display accordignally ( green for correct, red for oncorrect and the green will also display)
-- **Hint Button:** Hint to the displayed question is shown( after clicking it , a message with the hint  will pop up)
-- **Reset:** Where user can start from the first question, this function sucesfully clears score counter and quetion counter. 
-- **Play Button:** Brings the user back to the start of the game.
-- **Home Button:** Brings the user back to the home page, where user needs to put their name again. Perfect for multiple users. 
+### Functional Highlights
+
+- **User Input:** If no name is entered, a pop-up message appears.
+- **Start Button:** Initiates the quiz.
+- **Multiple Choice Section:** Users select one of four answers, with color-coded feedback.
+- **Hint Button:** Provides a hint for the current question.
+- **Reset:** Allows the user to start over, clearing the score and question counter.
+- **Play Button:** Restarts the game.
+- **Home Button:** Returns to the home page, ready for a new user to enter their name.
+
 
 ## Future Enhancements
 
-- **Timer:** Implementation of a timer for increased difficulty.
-- **Difficulty Level:** Adding questions with options for various levels of difficulties (easy, medium, hard).
-- **Esthetics:** A nice looking pop-up message when the user hasn't inserted their name would be a nice touch.
-- **Community Features:** Options for users to save their scores, share their results on social platforms and compete with others via a leaderboard.
-
-## Resources and Tools Used
-
-### Fonts and Icons
-
-- [Google Fonts](https://fonts.google.com/) - Imported fonts used throughout the website.
-- [Font Awesome](https://fontawesome.com/) - Provided the iconography on the website.
-- [Dafont: Gabriel Weiss' Friends](https://www.dafont.com/gabriel-weiss-friends.font) - Used in creating a logo with the iconic "friends" font.
-
-### Development Tools
-
-- [Google Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for troubleshooting, testing features, and solving issues related to responsiveness and styling.
-- [GitHub](https://github.com/) - Used to save and store the project files.
+- **Timer:** Adding a timer for increased difficulty.
+- **Difficulty Levels:** Introducing questions with varying difficulty (easy, medium, hard).
+- **Aesthetics:** A visually appealing pop-up message for name validation.
+- **Community Features:** Options for users to save scores, share results on social platforms, and compete via a leaderboard.
 
 
-### Image and Color Resources
+### Resources and Tools Used
+
+#### Fonts and Icons
+
+- [Google Fonts](https://fonts.google.com/) - Provided fonts used throughout the website.
+- [Font Awesome](https://fontawesome.com/) - Provided icons.
+- [Dafont: Gabriel Weiss' Friends](https://www.dafont.com/gabriel-weiss-friends.font) - Used for creating the logo.
+
+#### Development Tools
+
+- [Google Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for troubleshooting, testing, and solving issues related to responsiveness and styling.
+- [GitHub](https://github.com/) - Used to save and store project files.
+
+
+#### Image and Color Resources
 
 - [Photopea](https://www.photopea.com/) - Used for logo creation.
-- [Responsively](https://responsively.app/) - used to capture ewebsite responsivenes. 
-- [Browserstack](https://www.browserstack.com/) - used to test browser responsivenes. 
+- [Responsively](https://responsively.app/) - Used to capture website responsiveness.
+- [Browserstack](https://www.browserstack.com/) - Used to test browser responsiveness.
 - [Tiny PNG](https://tinypng.com/) - Compressed images to optimize website performance.
 - [Favicon.io](https://favicon.io/) - Tool used to create the website's favicon.
 - [Coolors](https://coolors.co/) - Assisted in creating a modern, matching color palette.
 - [Canva](https://www.canva.com/) - Used for creating mockups and wireframes.
-
 
 
 ## Responsiveness
