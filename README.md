@@ -46,7 +46,7 @@ This website  is designed to bring fun and excitement. Created for the true fans
 
 The website uses a palette of purple, orange, and white. These colors were carefully selected to evoke the famous apartment with the iconic purple door with a golden frame.
 
-- ![Colors](readme_documents/colors.png)
+![Colors](readme_documents/colors.png)
 
 
 ### Typography
@@ -56,7 +56,7 @@ I chose the Google font Caveat to mimic the famous Friends font (Gabriel Weiss),
 ### Logo
 
 The main concept of creating the logo was to bring the user back in time to their favorite TV show. The logo is made of letters F-R-I-E-N-D-S with multicolor dots in between each letter. Created by myself using the Gabriel Weiss font that was originally used for the show's logo and then converted into a picture for ease of use and consistency.
-- [Logo](assets/images/logo_friends.jpg)
+![Logo](assets/images/logo_friends.jpg)
 
 ### Wireframes
 
@@ -76,7 +76,7 @@ The main concept of creating the logo was to bring the user back in time to thei
 - **Welcome Message:** On arrival, the user is welcomed in a very friendly manner with a message. The text highlights the number of questions, describes the game, and gives helpful tips like the usage of hint and reset buttons. The user is directed to the bottom of the page to insert their name to start the game.Once the name is inserted, the user is advised to press the "start" button to begin.
 
     *Welcome Page Message*
-    - [View](readme_documents/responsively-screenshots/visual_page_1.jpeg)
+    - ![View](readme_documents/visual_page_1.jpeg)
 
  - **Name Validation:** In the event of no name inserted, the user is reminded to fill in the name by a drop-down message. 
 
@@ -87,19 +87,19 @@ The main concept of creating the logo was to bring the user back in time to thei
 ### Quiz Section
 
 - **Visual Appeal:** The quiz logo appears at the top of the page. On the left under the logo, a counter displays the current question number out of 10. On the right, a score counter shows the number of correct answers. Below the scores, a random question is displayed with four possible answers. Underneath the answers, there are hint and reset buttons.
-  - ![Quiz Game](readme_documents/responsively-screenshots/visual_page_2.jpeg)
+  - ![Quiz Game](readme_documents/visual_page_2.jpeg)
 - **Feedback:** When an incorrect answer is selected, the option button turns red, and the correct answer turns green. Once an answer is selected, the options are disabled to ensure the correct score is recorded.
-  - ![Correct / Incorrect Answer](readme_documents/responsively-screenshots/answers_correct_incorrect.png)
+  - ![Correct / Incorrect Answer](readme_documents/answers_correct_incorrect.png)
 
 ### End Game Page and Results
 
 - **Message:** The user is congratulated with a personalized message and their score, informed that they have reached the end of the game, and given options to play again or go back to the home page.
-  - ![Results Page](readme_documents/responsively-screenshots/visual_page_3.jpeg)
+  - ![Results Page](readme_documents/visual_page_3.jpeg)
 
 #### Error Page
 
 - **Error Message:** This page was designed for learning purposes; no try and catch error needed as there are no external applications used for the purpose of this quiz.
-- *Error Page* - [View](readme_documents/error-page-screenshot.png)
+  - *Error Page* - [View](readme_documents/error-page-screenshot.png)
 
 ### Functional Highlights
 
@@ -107,6 +107,8 @@ The main concept of creating the logo was to bring the user back in time to thei
 - **Start Button:** Initiates the quiz.
 - **Multiple Choice Section:** Users select one of four answers, with color-coded feedback.
 - **Hint Button:** Provides a hint for the current question.
+  - *Hint display* - [View](readme_documents/hint.png)
+
 - **Reset:** Allows the user to start over, clearing the score and question counter.
 - **Play Button:** Restarts the game.
 - **Home Button:** Returns to the home page, ready for a new user to enter their name.
@@ -289,7 +291,7 @@ Content was inspired mainly by the tutorials below:
 - Code Institute : Love Maths Project Walkthrough
 - [How To Make Quiz App Using JavaScript](https://www.youtube.com/watch?v=PBcqGxrr9g8&t=1741s)
 - [Build a Quiz App](https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF)
-- readme - some inspiration taken from KevinFlanagan7/Masters-quiz/main/README.md, thank you Kevin. 
+- README- some inspiration taken from [KevinFlanagan7Masters README](https://github.com/KevinFlanagan7/Masters-quiz/blob/main/README.md) Thank you Kevin. 
 
 ### Learning and Support Resources
 
@@ -298,6 +300,7 @@ Content was inspired mainly by the tutorials below:
 - [Code Institute](https://codeinstitute.net/) - To structure and support learnings.
 - [ChatGPT](https://openai.com/chatgpt) - generating questions, quick information support when needed.
 - [Perplexity AI](https://www.perplexity.ai/) - For a focused source of information in one place.
+- [SoloLrarn](https://www.sololearn.com/en/) - Java Script constant practise.
 - [Study Music, Concentration, Focus](https://www.youtube.com/results?search_query=study+music+concentration+focus) - To keep me calm during work.
 
 ### Personal comments and learnings 
