@@ -191,7 +191,7 @@ The main concept of creating the logo was to bring the user back in time to thei
 
     *End Page Mobile*
 
-    ![End Page Mobile](/readme_documents/responsively-screenshots/mobile_page3.jpeg)
+    ![End Page Mobile](/readme_documents/responsively-screenshots/mobile_page_3.jpeg)
 
     *End Page Tablet*
 
@@ -220,15 +220,16 @@ The main concept of creating the logo was to bring the user back in time to thei
 
 ### Lighthouse Testing
 
-- The Lighthouse test for mobile passed 90% ; here are the [results](readme_documents/lighthouse-mobile.png).
-- The Lighthouse test for mobile passed; readable rapport available here  [rapport](readme_documents/lighthouse_testing/lighthouse_mobile_.rapport.html).
-- The Lighthouse test for desktop also passed; here are the [results](readme_documents/lighthouse-desktop.png).
-- The Lighthouse test for desktop passed 96%; readable rapport available here  [rapport](readme_documents/lighthouse_testing/lighthouse_desktop_rapport.html).
+- The Lighthouse test for mobile passed 90% full rapport available here [rapport](readme_documents/lighthouse_testing/lighthouse_mobile_.rapport.html) ![results](readme_documents/lighthouse_testing/lighthouse_mobile.png)
+
+- The Lighthouse test for desktop passed 96% - full rapport available here  [rapport](readme_documents/lighthouse_testing/lighthouse_desktop_rapport.html) ![results](readme_documents/lighthouse_testing/lighthouse_desktop.png).
+
+
 
 
 ### Browser Testing 
 
-- The website has been tested on multiple browsers: Chrome- main, Firefox, Safari ,Edge and Opera with no errors or bugs. 
+- The website has been tested on multiple browsers: Chrome, Firefox, Safari ,Edge and Opera with no errors or bugs. 
 
 
     <details><summary>Browser Testing</summary>
@@ -251,7 +252,7 @@ The main concept of creating the logo was to bring the user back in time to thei
 
 ### Further Testing
 
-Friends and family tested the site for usability issues and bugs.
+Friends and family tested the site for usability issues and bugs with no errors unfixed.
 
 ### Known Bugs / fixed bugs 
 - #### No known bugs recorded at the end of the project.
