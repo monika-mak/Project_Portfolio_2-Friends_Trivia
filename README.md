@@ -253,9 +253,17 @@ The main concept of creating the logo was to bring the user back in time to thei
 
 Friends and family tested the site for usability issues and bugs.
 
-### Known Bugs
+### Known Bugs / fixed bugs 
+- #### No known bugs recorded at the end of the project.
+  Many of the issues I had found were simple semicolons or naming mistakes and some were as complicated as function being connected incorreclty. Once one bug was fixed another appeared which made the learning really deep.
+  Many bugs during the process of making it abd to list them all would be a challenge. The main issue I had was with answerr button colors and hint and had used tutor support on this ocassions. 
+  The score wont load properly - function issue, naming was incorrect.
+  Colors on the correct / incorrect buttons wont apply properly - I was targeting answer buttons not buttons individually.
+  Buttons wont apply correct colors - Changed accepthing answers tio true, used const not let  
+  Colors apply but on background not buttons - solved with tutor help, parent element was the issue, 
+  Color worked but not always - it was spotted by tutor , mouse was still hovering over it - disabled mouse afetr the answer was made. 
+  Hint messsage was not clearing - hint name was chaged to a fixed name , but after the call with mentor I got a great advice to change the whole naming and and separate icon with a span. 
 
-No known bugs recorded.
 
 ## Deployment
 
@@ -302,9 +310,6 @@ Content was inspired mainly by the tutorials below:
 - [Perplexity AI](https://www.perplexity.ai/) - For a focused source of information in one place.
 - [SoloLrarn](https://www.sololearn.com/en/) - Java Script constant practise.
 - [Study Music, Concentration, Focus](https://www.youtube.com/results?search_query=study+music+concentration+focus) - To keep me calm during work.
-
-### Personal comments and learnings 
--This was quite a journey and i am aware that bugs should be recorded in the readme, saying that I trust that section would take 3 days to complete and i hope commit history will be a great resource of it. Many of the issues I had found were simple semicolons or naming mistakes and some were as complicated as function being connected incorreclty. Once one bug was fixed another appeared which made the learning really deep.  
 
 ### Acknowledgements
 
